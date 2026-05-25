@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Search, LogOut } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -17,6 +17,7 @@ interface NavDesktopProps {
 
 export function NavDesktop({ links, query, onQueryChange, onKeyDown }: NavDesktopProps) {
   const { signOut } = useAuth();
+  const navigate = useNavigate();
 
   return (
     <header className="hidden md:block fixed top-0 left-0 right-0 bg-sand-100 border-b border-sand-300 z-20">
@@ -44,7 +45,7 @@ export function NavDesktop({ links, query, onQueryChange, onKeyDown }: NavDeskto
         </div>
         <div className="flex-1 flex justify-end">
           <button
-            onClick={signOut}
+            onClick={async () => { await signOut(); navigate("/signin"); }}
             className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-sans font-medium text-ink-500 hover:bg-sand-200 hover:text-ink-900 transition-colors"
           >
             <LogOut size={15} strokeWidth={1.75} />

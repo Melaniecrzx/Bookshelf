@@ -31,7 +31,7 @@ export function NavMobile({ leftLinks, rightLinks, isOnSearch }: NavMobileProps)
   const moreItems: MoreItem[] = [
     ...leftOverflow.map(l => ({ type: "link" as const, ...l })),
     ...rightOverflow.map(l => ({ type: "link" as const, ...l })),
-    { type: "action", label: "Sign out", icon: LogOut, onClick: signOut },
+    { type: "action", label: "Sign out", icon: LogOut, onClick: async () => { await signOut(); navigate("/signin"); } },
   ];
 
   return (
