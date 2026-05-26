@@ -24,3 +24,16 @@
 ## Pages
 
 - Landing, Currently Reading, To Read, Read, Stats
+
+## Git commits
+
+Utilise les Conventional Commits :
+
+- feat: nouvelle feature
+- fix: correction de bug
+- refactor: refactorisation sans changement de comportement
+- style: changements CSS/design uniquement
+- chore: maintenance, config, dépendances
+- docs: documentation
+
+Exemple : "feat: add guest mode with mock data"

@@ -22,11 +22,6 @@ import { SignIn } from "./pages/SignIn";
 import { GuestBanner } from "./components/GuestBanner";
 import { ToastProvider } from "./contexts/ToastContext";
 
-function RequireAuth({ children }: { children: React.ReactNode }) {
-  const { session } = useAuth();
-  if (!session) return <Navigate to="/signin" replace />;
-  return <>{children}</>;
-}
 
 function ScrollToTop() {
   const { pathname } = useLocation();

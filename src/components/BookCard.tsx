@@ -15,7 +15,7 @@ interface BookCardProps {
 export function BookCard({ book, showStatus = true, onClick }: BookCardProps) {
   const pagesRead = useReadingProgress(book.id);
   const showProgress = book.status === "reading" && !!book.pages;
-  const pct = showProgress ? Math.round((pagesRead / book.pages!) * 100) : 0;
+  const pct = showProgress ? Math.round(((pagesRead ?? 0) / book.pages!) * 100) : 0;
 
   return (
     <div
@@ -48,7 +48,7 @@ export function BookCard({ book, showStatus = true, onClick }: BookCardProps) {
 
         {showProgress && (
           <div className="mt-1">
-            <ProgressBar value={pagesRead} max={book.pages!} className="mb-1" />
+            <ProgressBar value={pagesRead ?? 0} max={book.pages!} className="mb-1" />
             <div className="flex items-center justify-between">
               <p className="text-[10px] text-ink-400 font-sans">
                 {pagesRead} / {book.pages} pages

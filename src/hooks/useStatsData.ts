@@ -76,7 +76,7 @@ export function useStatsData() {
     const max = Math.max(...raw.map((c) => c.count), 1);
     const data = raw.map((c) => ({ ...c, pct: (c.count / max) * 100 }));
 
-    const sorted = [...withPages].sort((a, b) => a.pageCount! - b.pages!);
+    const sorted = [...withPages].sort((a, b) => a.pages! - b.pages!);
     return {
       bookLengthData: data,
       shortest: sorted[0] ?? null,

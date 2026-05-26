@@ -59,8 +59,8 @@ export function BookLengthsCard({
                 book ? (
                   <div key={label} className="flex items-center gap-2.5">
                     <div className="w-8 h-11 rounded shrink-0 overflow-hidden bg-sand-200">
-                      {book.coverUrl ? (
-                        <img src={book.coverUrl} alt={book.title} className="w-full h-full object-cover" />
+                      {book.cover_url ? (
+                        <img src={book.cover_url} alt={book.title} className="w-full h-full object-cover" />
                       ) : (
                         <div className="w-full h-full bg-sand-300" />
                       )}
@@ -72,7 +72,7 @@ export function BookLengthsCard({
                       <p className="text-xs font-sans font-medium text-ink-900 truncate leading-tight">
                         {book.title}
                       </p>
-                      <p className="text-xs font-sans text-ink-400">{book.pageCount} pages</p>
+                      <p className="text-xs font-sans text-ink-400">{book.pages} pages</p>
                     </div>
                   </div>
                 ) : null,
