@@ -95,10 +95,42 @@ html[data-theme="dark"] textarea {
   color: var(--color-ink-900);
 }
 
+/* ── OLED Theme ──────────────────────────────────────── */
+html[data-theme="oled"] {
+  --shelf-top:    #1A1A1A;
+  --shelf-body:   #0A0A0A;
+  --shelf-shadow: rgba(0, 0, 0, 0.6);
+  --color-sand-50:  #000000;
+  --color-sand-100: #0A0A0A;
+  --color-sand-200: #141414;
+  --color-sand-300: #1E1E1E;
+  --color-ink-100:  #1A1A1A;
+  --color-ink-300:  #4A4A4A;
+  --color-ink-400:  #7A7A7A;
+  --color-ink-500:  #ABABAB;
+  --color-ink-700:  #D1D1D6;
+  --color-ink-900:  #F8F8F8;
+  background-color: #000000;
+  color: #F8F8F8;
+}
+
+html[data-theme="oled"] input,
+html[data-theme="oled"] textarea {
+  background-color: var(--color-sand-200);
+  color: var(--color-ink-900);
+}
+
 /* ── Text sizes ──────────────────────────────────────── */
-html[data-size="S"] { font-size: 14px; }
-html[data-size="M"] { font-size: 16px; }
-html[data-size="L"] { font-size: 18px; }
+html[data-size="S"]  { font-size: 14px; }
+html[data-size="M"]  { font-size: 16px; }
+html[data-size="L"]  { font-size: 18px; }
+html[data-size="XL"] { font-size: 20px; }
+
+/* ── Line heights ────────────────────────────────────── */
+html[data-line="compact"]  { line-height: 1.3; }
+html[data-line="default"]  { line-height: 1.5; }
+html[data-line="relaxed"]  { line-height: 1.7; }
+html[data-line="spacious"] { line-height: 2.0; }
 
 /* ── Confetti ─────────────────────────────────────────── */
 @keyframes confetti-fall-cw {

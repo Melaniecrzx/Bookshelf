@@ -1,9 +1,13 @@
 import type { SectionId } from "./SettingsSidebar";
 
 const items: { id: SectionId; label: string; danger?: boolean }[] = [
-  { id: "appearance", label: "Appearance" },
-  { id: "reading",    label: "Reading" },
-  { id: "danger",     label: "Danger Zone", danger: true },
+  { id: "appearance",    label: "Appearance" },
+  { id: "account",       label: "Account" },
+  { id: "reading",       label: "Reading" },
+  { id: "notifications", label: "Notifications" },
+  { id: "privacy",       label: "Privacy" },
+  { id: "data",          label: "Data" },
+  { id: "danger",        label: "Danger Zone", danger: true },
 ];
 
 interface SettingsMobileTabsProps {
