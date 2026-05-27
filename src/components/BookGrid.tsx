@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { BookCard } from "./BookCard";
 import { BookModal } from "./BookModal";
 import { RatingModal } from "./RatingModal";
@@ -20,20 +20,16 @@ interface BookGridProps {
   emptyMessage?: string;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.05 },
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 16 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.25, ease: "easeOut" },
-  },
+  visible: { opacity: 1, y: 0 },
 };
 
 export function BookGrid({
@@ -92,7 +88,7 @@ export function BookGrid({
             animate="visible"
           >
             {sortedBooks.map((book) => (
-              <motion.div key={book.id} variants={cardVariants}>
+              <motion.div key={book.id} variants={cardVariants} transition={{ duration: 0.25, ease: "easeOut" }}>
                 <BookCard book={book} showStatus={showStatus} onClick={() => setSelectedBook(book)} />
               </motion.div>
             ))}
