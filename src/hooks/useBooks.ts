@@ -6,6 +6,8 @@ import { useAuth } from "@/contexts/AuthContext";
 import { sampleBooks } from "@/mocks/sample-books";
 
 const GUEST_KEY = "bookshelf-guest-books";
+const GUEST_VERSION_KEY = "bookshelf-guest-version";
+const GUEST_VERSION = "v2"; // bump to reset guest localStorage with fresh mock data
 
 export interface Shelf {
   id: string;
@@ -27,15 +29,20 @@ function statusToGuestShelfId(status: ReadingStatus): string {
 
 function loadGuestBooks(): Book[] {
   try {
-    const raw = localStorage.getItem(GUEST_KEY);
-    if (raw) return JSON.parse(raw) as Book[];
+    const version = localStorage.getItem(GUEST_VERSION_KEY);
+    if (version === GUEST_VERSION) {
+      const raw = localStorage.getItem(GUEST_KEY);
+      if (raw) return JSON.parse(raw) as Book[];
+    }
   } catch {}
+  // Initialize (or re-initialize on version bump) with fresh sample data
   const initialized = sampleBooks.map((b) => ({
     ...b,
     user_book_id: b.id,
     shelf_id: statusToGuestShelfId(b.status),
   }));
   localStorage.setItem(GUEST_KEY, JSON.stringify(initialized));
+  localStorage.setItem(GUEST_VERSION_KEY, GUEST_VERSION);
   return initialized;
 }
 

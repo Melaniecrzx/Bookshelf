@@ -65,6 +65,7 @@ export const sampleBooks: Book[] = [
     description: 'The hero-Loss of Holden Caulfield has been reprinted over 35 million times and been translated into every major language in the world.',
     status: 'read',
     date_finished: '2025-03-05',
+    rating: 3,
   },
   {
     id: '6',
@@ -78,6 +79,7 @@ export const sampleBooks: Book[] = [
     description: 'Staring unflinchingly into the abyss of slavery, this spellbinding novel transforms history into a story as powerful as Exodus and as intimate as a lullaby.',
     status: 'read',
     date_finished: '2025-04-12',
+    rating: 4,
   },
   {
     id: '7',
@@ -91,6 +93,7 @@ export const sampleBooks: Book[] = [
     description: 'A father and his son walk alone through burned America. Nothing moves in the ravaged landscape save the ash on the wind.',
     status: 'read',
     date_finished: '2025-05-22',
+    rating: 5,
   },
   {
     id: '8',
@@ -104,6 +107,7 @@ export const sampleBooks: Book[] = [
     description: 'Connell and Marianne grow up in the same small town in rural Ireland but the similarities end there.',
     status: 'read',
     date_finished: '2025-06-30',
+    rating: 4,
   },
   {
     id: '9',
@@ -117,6 +121,7 @@ export const sampleBooks: Book[] = [
     description: 'A transporting novel about a man who is ordered to spend the rest of his life inside a luxury hotel.',
     status: 'read',
     date_finished: '2025-08-11',
+    rating: 5,
   },
   {
     id: '10',
@@ -142,6 +147,7 @@ export const sampleBooks: Book[] = [
     description: "From a renowned historian comes a groundbreaking narrative of humanity's creation and evolution.",
     status: 'read',
     date_finished: '2025-09-03',
+    rating: 4,
   },
   {
     id: '12',
@@ -155,6 +161,7 @@ export const sampleBooks: Book[] = [
     description: 'Born to survivalists in the mountains of Idaho, Tara Westover was seventeen the first time she set foot in a classroom.',
     status: 'read',
     date_finished: '2025-10-17',
+    rating: 5,
   },
   {
     id: '13',
@@ -168,6 +175,7 @@ export const sampleBooks: Book[] = [
     description: 'Her name was Henrietta Lacks, but scientists know her as HeLa.',
     status: 'read',
     date_finished: '2025-11-28',
+    rating: 3,
   },
   {
     id: '14',
@@ -181,6 +189,7 @@ export const sampleBooks: Book[] = [
     description: 'Daniel Kahneman, the renowned psychologist and winner of the Nobel Prize in Economics, takes us on a groundbreaking tour of the mind.',
     status: 'read',
     date_finished: '2025-12-15',
+    rating: 4,
   },
   {
     id: '15',
@@ -194,6 +203,7 @@ export const sampleBooks: Book[] = [
     description: "The compelling, inspiring, and comically sublime story of one man's coming-of-age, set during the twilight of apartheid.",
     status: 'read',
     date_finished: '2026-01-10',
+    rating: 4,
   },
   {
     id: '16',
@@ -207,6 +217,7 @@ export const sampleBooks: Book[] = [
     description: 'Atomic Habits offers a proven framework for improving every day.',
     status: 'read',
     date_finished: '2026-01-28',
+    rating: 3,
   },
   {
     id: '17',
@@ -292,6 +303,7 @@ export const sampleBooks: Book[] = [
     description: 'The Matrix is a world within the world, a global consensus-hallucination.',
     status: 'read',
     date_finished: '2026-02-14',
+    rating: 2,
   },
   {
     id: '24',
@@ -305,6 +317,7 @@ export const sampleBooks: Book[] = [
     description: "Told in Kvothe's own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.",
     status: 'read',
     date_finished: '2026-02-28',
+    rating: 4,
   },
   {
     id: '25',
@@ -332,6 +345,7 @@ export const sampleBooks: Book[] = [
     description: "A season of endings has begun. It starts with the great red rift across the heart of the world's sole continent.",
     status: 'read',
     date_finished: '2026-03-30',
+    rating: 3,
   },
   {
     id: '27',
@@ -381,6 +395,7 @@ export const sampleBooks: Book[] = [
     description: 'On a remote, icy planet, the soldier known as Breq is drawing closer to completing her quest.',
     status: 'read',
     date_finished: '2026-04-10',
+    rating: 3,
   },
   {
     id: '31',
@@ -394,6 +409,7 @@ export const sampleBooks: Book[] = [
     description: 'Deep work is the ability to focus without distraction on a cognitively demanding task.',
     status: 'read',
     date_finished: '2026-04-22',
+    rating: 4,
   },
   {
     id: '32',
@@ -493,6 +509,7 @@ export const sampleBooks: Book[] = [
     description: "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees.",
     status: 'read',
     date_finished: '2026-05-12',
+    rating: 2,
   },
   {
     id: '40',
@@ -530,6 +547,7 @@ export const sampleBooks: Book[] = [
     description: 'Fully revised and updated — includes new refactorings and code examples.',
     status: 'read',
     date_finished: '2026-05-18',
+    rating: 3,
   },
   {
     id: '43',
