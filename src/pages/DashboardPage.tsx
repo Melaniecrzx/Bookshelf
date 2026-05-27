@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Plus } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 import type { Book } from "../types/book";
 import type { Shelf } from "../hooks/useBooks";
 import { BookModal } from "../components/BookModal";
@@ -97,7 +98,7 @@ export function DashboardPage() {
           </button>
         </div>
         <div className="py-8 flex flex-col gap-10">
-          {orderedShelves.map((shelf) => (
+          {orderedShelves.map((shelf, index) => (
             <ShelfSection
               key={shelf.id}
               title={shelf.name}
@@ -107,6 +108,7 @@ export function DashboardPage() {
               viewMoreTo={`/library/shelf/${shelf.id}`}
               onRename={shelf.type === "custom" ? (name) => renameShelf({ id: shelf.id, name }) : undefined}
               onDelete={shelf.type === "custom" ? () => deleteShelf(shelf.id) : undefined}
+              animationDelay={index * 0.07}
             />
           ))}
           {addingShelf && (
@@ -141,13 +143,16 @@ export function DashboardPage() {
         </div>
       </div>
 
-      {selectedBook && (
-        <BookModal
-          book={selectedBook}
-          onClose={() => setSelectedBook(null)}
-          onMarkAsRead={handleMarkAsRead}
-        />
-      )}
+      <AnimatePresence>
+        {selectedBook && (
+          <BookModal
+            key={selectedBook.id}
+            book={selectedBook}
+            onClose={() => setSelectedBook(null)}
+            onMarkAsRead={handleMarkAsRead}
+          />
+        )}
+      </AnimatePresence>
       {ratingBook && (
         <RatingModal
           bookTitle={ratingBook.title}

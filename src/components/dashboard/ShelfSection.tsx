@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, MoreHorizontal, Pencil, Trash2, Check, X } from "lucide-react";
+import { motion } from "framer-motion";
 import type { Book } from "../../types/book";
 import { ShelfBook } from "./ShelfBook";
 import { Shelf } from "./Shelf";
@@ -13,6 +14,7 @@ interface ShelfSectionProps {
   viewMoreTo: string;
   onRename?: (name: string) => void;
   onDelete?: () => void;
+  animationDelay?: number;
 }
 
 export function ShelfSection({
@@ -23,6 +25,7 @@ export function ShelfSection({
   viewMoreTo,
   onRename,
   onDelete,
+  animationDelay = 0,
 }: ShelfSectionProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [renaming, setRenaming] = useState(false);
@@ -62,7 +65,11 @@ export function ShelfSection({
   const hasActions = !!(onRename || onDelete);
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, ease: "easeOut", delay: animationDelay }}
+    >
       <div className="flex items-center justify-between mb-3 px-6">
         {/* Left — title or rename input */}
         <div className="flex items-center gap-2 min-w-0">
@@ -158,6 +165,6 @@ export function ShelfSection({
         )}
         <Shelf />
       </div>
-    </section>
+    </motion.section>
   );
 }

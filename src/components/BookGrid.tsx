@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { BookCard } from "./BookCard";
 import { BookModal } from "./BookModal";
 import { RatingModal } from "./RatingModal";
@@ -18,6 +19,22 @@ interface BookGridProps {
   showStatus?: boolean;
   emptyMessage?: string;
 }
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.05 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.25, ease: "easeOut" },
+  },
+};
 
 export function BookGrid({
   books, allGenres, search, onSearch, selectedGenres, onGenresChange,
@@ -56,6 +73,8 @@ export function BookGrid({
     });
   }, [books, sort]);
 
+  const shouldAnimate = sortedBooks.length <= 20;
+
   return (
     <>
       <div className="flex flex-col gap-6">
@@ -65,6 +84,19 @@ export function BookGrid({
             <span className="font-serif text-4xl text-sand-300 mb-3">⊘</span>
             <p className="text-ink-400 font-sans text-sm">{emptyMessage}</p>
           </div>
+        ) : shouldAnimate ? (
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {sortedBooks.map((book) => (
+              <motion.div key={book.id} variants={cardVariants}>
+                <BookCard book={book} showStatus={showStatus} onClick={() => setSelectedBook(book)} />
+              </motion.div>
+            ))}
+          </motion.div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {sortedBooks.map((book) => (
@@ -73,13 +105,18 @@ export function BookGrid({
           </div>
         )}
       </div>
-      {selectedBook && (
-        <BookModal
-          book={selectedBook}
-          onClose={() => setSelectedBook(null)}
-          onMarkAsRead={handleMarkAsRead}
-        />
-      )}
+
+      <AnimatePresence>
+        {selectedBook && (
+          <BookModal
+            key={selectedBook.id}
+            book={selectedBook}
+            onClose={() => setSelectedBook(null)}
+            onMarkAsRead={handleMarkAsRead}
+          />
+        )}
+      </AnimatePresence>
+
       {ratingBook && <RatingModal bookTitle={ratingBook.title} onDismiss={() => handleRatingDone(null)} onSave={handleRatingDone} />}
       {showConfetti && <Confetti onDone={() => setShowConfetti(false)} />}
     </>

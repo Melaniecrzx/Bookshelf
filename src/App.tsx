@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { SettingsProvider } from "./contexts/SettingsContext";
 import { useAuth } from "./contexts/AuthContext";
 import { useBooks } from "./hooks/useBooks";
@@ -34,7 +35,8 @@ function ScrollToTop() {
 function Layout() {
   const { loading, session } = useAuth();
   const { counts } = useBooks();
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   const isAuthPage = pathname === "/signup" || pathname === "/signin";
   const isGuest = !session && !isAuthPage;
 
@@ -51,18 +53,25 @@ function Layout() {
         }
       >
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Navigate to={session ? "/library" : "/signin"} replace />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/library" element={<DashboardPage />} />
-          <Route path="/library/shelf/:shelfId" element={<ShelfPage />} />
-          <Route path="/goals" element={<GoalsPage />} />
-          <Route path="/stats" element={<StatsPage />} />
-          <Route path="/discover" element={<DiscoverPage />} />
-          <Route path="/settings" element={<AppearancePage />} />
-          <Route path="/search" element={<SearchPage />} />
-        </Routes>
+        <motion.div
+          key={pathname}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
+        >
+          <Routes>
+            <Route path="/" element={<Navigate to={session ? "/library" : "/signin"} replace />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/library" element={<DashboardPage />} />
+            <Route path="/library/shelf/:shelfId" element={<ShelfPage />} />
+            <Route path="/goals" element={<GoalsPage />} />
+            <Route path="/stats" element={<StatsPage />} />
+            <Route path="/discover" element={<DiscoverPage />} />
+            <Route path="/settings" element={<AppearancePage />} />
+            <Route path="/search" element={<SearchPage />} />
+          </Routes>
+        </motion.div>
       </main>
       {isGuest && <GuestBanner />}
     </>

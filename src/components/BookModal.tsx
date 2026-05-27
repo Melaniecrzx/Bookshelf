@@ -1,4 +1,5 @@
 import { X, Trash2, Calendar, BookOpen, CheckCheck } from "lucide-react";
+import { motion } from "framer-motion";
 import type { Book } from "../types/book";
 import { GenreTag } from "./ui/GenreTag";
 import { BookCover } from "./ui/BookCover";
@@ -32,13 +33,21 @@ export function BookModal({ book, onClose, onMarkAsRead }: BookModalProps) {
   const showProgress = currentStatus === "reading" && !!book.pages;
 
   return (
-    <div
+    <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-ink-900/60 backdrop-blur-sm" />
-      <div
+      <motion.div
         className="relative z-10 bg-sand-50 w-full max-w-md rounded-2xl border border-sand-300 shadow-2xl"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -157,7 +166,7 @@ export function BookModal({ book, onClose, onMarkAsRead }: BookModalProps) {
             </button>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
