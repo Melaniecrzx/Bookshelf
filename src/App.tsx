@@ -52,7 +52,7 @@ function Layout() {
       >
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Navigate to="/library" replace />} />
+          <Route path="/" element={<Navigate to={session ? "/library" : "/signin"} replace />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/library" element={<DashboardPage />} />
