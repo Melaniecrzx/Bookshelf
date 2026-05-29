@@ -30,6 +30,7 @@ export function SearchPage() {
   const debouncedQuery = useDebounce(input, 500);
 
   const { data, isFetching, isError } = useHardcoverSearch(debouncedQuery);
+  console.log(data);
 
   useEffect(() => {
     setInput(qParam);
@@ -47,7 +48,7 @@ export function SearchPage() {
 
   function handleAdd(result: GoogleBookResult) {
     if (isInLibrary(result)) return;
-    if (!guard('Sign up to save books to your library')) return;
+    if (!guard("Sign up to save books to your library")) return;
     addBook(toBook(result));
     setAdded((prev) => new Set([...prev, result.googleId]));
   }

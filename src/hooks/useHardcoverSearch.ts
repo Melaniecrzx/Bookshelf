@@ -12,25 +12,31 @@ export interface GoogleBookResult {
   publishedDate: string;
   genres: string[];
   description: string | null;
-  publisher: string;
+  publisher: string | null;
+  series: string | null;
+  seriesId: number | null;
+  seriesSlug: string | null;
+  seriesPosition: number | null;
 }
 
 // ── Types internes Hardcover ──────────────────────────────────────────────────
 
-interface HardcoverImage {
-  url: string;
+interface HardcoverFeaturedSeries {
+  position?: number | null;
+  series?: { id?: number; name?: string; slug?: string };
 }
 
 interface HardcoverDocument {
   id: number;
   title: string;
   author_names: string[];
-  image?: HardcoverImage | null;
+  image?: { url: string } | null;
   isbns?: string[];
   pages?: number | null;
-  release_date?: string;
+  release_year?: number | null;
   genres?: string[];
   description?: string | null;
+  featured_series?: HardcoverFeaturedSeries | null;
 }
 
 interface HardcoverResults {
@@ -41,23 +47,22 @@ interface HardcoverResults {
 // ── Mapping ───────────────────────────────────────────────────────────────────
 
 function mapDocument(doc: HardcoverDocument): GoogleBookResult {
-  const isbns = doc.isbns ?? [];
-  // L'array contient un mix ISBN-10 (10 chars) et ISBN-13 (13 chars)
-  const isbn13 = isbns.find((s) => s.length === 13) ?? null;
-  const isbn10 = isbns.find((s) => s.length === 10) ?? null;
-
   return {
     googleId: String(doc.id),
-    title: doc.title ?? "Unknown title",
-    authors: doc.author_names ?? [],
+    title: doc.title,
+    authors: doc.author_names,
     coverUrl: doc.image?.url ?? null,
-    isbn13,
-    isbn10,
+    isbn13: doc.isbns?.[0] ?? null,
+    isbn10: null,
     pageCount: doc.pages ?? null,
-    publishedDate: doc.release_date ?? "",
+    publishedDate: doc.release_year?.toString() ?? "",
     genres: doc.genres ?? [],
     description: doc.description ?? null,
-    publisher: "",
+    publisher: null,
+    series: doc.featured_series?.series?.name ?? null,
+    seriesId: doc.featured_series?.series?.id ?? null,
+    seriesSlug: doc.featured_series?.series?.slug ?? null,
+    seriesPosition: doc.featured_series?.position ?? null,
   };
 }
 
