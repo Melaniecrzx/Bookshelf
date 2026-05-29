@@ -43,6 +43,11 @@
   box-sizing: border-box;
 }
 
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
 body {
   font-family: "Inter", system-ui, sans-serif;
   background-color: #FDFAF6;
