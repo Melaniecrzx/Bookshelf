@@ -23,20 +23,24 @@ export function SeriesBooksSection({
 
   if (!isLoading && others.length === 0) return null;
 
-  const totalCount = books ? books.length + 1 : null; // +1 pour le livre courant
+  const totalCount = books ? books.length : null; // +1 pour le livre courant
 
   return (
     <div className="w-full rounded-2xl border border-sand-200 bg-sand-100 overflow-hidden">
-
       {/* Header */}
       <div className="flex items-start gap-2 px-4 py-3 border-b border-sand-200">
-        <BookOpen size={14} strokeWidth={1.75} className="text-ink-500 mt-0.5 shrink-0" />
+        <BookOpen
+          size={14}
+          strokeWidth={1.75}
+          className="text-ink-500 mt-0.5 shrink-0"
+        />
         <div>
           <p className="font-serif text-sm font-bold text-ink-900 leading-snug">
             {seriesName}
           </p>
           <p className="font-sans text-xs text-ink-400 mt-0.5">
-            by {author}{totalCount ? ` · ${totalCount} books` : ""}
+            by {author}
+            {totalCount ? ` · ${totalCount} books` : ""}
           </p>
         </div>
       </div>
@@ -80,7 +84,6 @@ export function SeriesBooksSection({
           ))}
         </div>
       )}
-
     </div>
   );
 }
