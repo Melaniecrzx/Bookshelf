@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { X, Calendar, BookOpen, Hash, Plus, Check } from "lucide-react";
 import type { GoogleBookResult } from "../hooks/useGoogleBooks";
 import { GenreTag } from "./ui/GenreTag";
@@ -29,11 +30,22 @@ export function SearchResultModal({ result, inLibrary, onClose, onAdd }: SearchR
   const isbn = result.isbn13 ?? result.isbn10;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      onClick={onClose}
+    >
       <div className="absolute inset-0 bg-ink-900/60 backdrop-blur-sm" />
-      <div
+      <motion.div
         className="relative z-10 bg-sand-50 w-full max-w-md rounded-2xl border border-sand-300 shadow-2xl flex flex-col max-h-[90dvh]"
-        onClick={(e) => e.stopPropagation()}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <button onClick={onClose} className="absolute top-4 right-4 p-1.5 rounded-lg text-ink-400 hover:text-ink-900 hover:bg-sand-200 transition-colors z-10">
           <X size={16} strokeWidth={1.75} />
@@ -93,7 +105,7 @@ export function SearchResultModal({ result, inLibrary, onClose, onAdd }: SearchR
             </button>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

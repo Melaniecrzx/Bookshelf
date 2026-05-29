@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import { useSearchParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useGoogleBooks } from "../hooks/useGoogleBooks";
@@ -98,14 +99,17 @@ export function SearchPage() {
         </ul>
       )}
 
-      {selectedResult && (
-        <SearchResultModal
-          result={selectedResult}
-          inLibrary={isInLibrary(selectedResult)}
-          onClose={() => setSelectedResult(null)}
-          onAdd={handleAdd}
-        />
-      )}
+      <AnimatePresence>
+        {selectedResult && (
+          <SearchResultModal
+            key={selectedResult.googleId}
+            result={selectedResult}
+            inLibrary={isInLibrary(selectedResult)}
+            onClose={() => setSelectedResult(null)}
+            onAdd={handleAdd}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
