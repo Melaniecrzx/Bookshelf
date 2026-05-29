@@ -45,6 +45,7 @@ export function BookCover({
       src={src}
       alt={title}
       className={className}
+      loading="lazy"
       onError={handleError}
     />
   );
