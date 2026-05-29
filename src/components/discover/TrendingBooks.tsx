@@ -23,6 +23,10 @@ function toGoogleBookResult(book: Book): GoogleBookResult {
     genres: book.genres,
     description: book.description,
     publisher: "",
+    series: null,
+    seriesId: null,
+    seriesSlug: null,
+    seriesPosition: null,
   };
 }
 
