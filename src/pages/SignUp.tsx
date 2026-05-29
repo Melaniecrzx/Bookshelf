@@ -32,12 +32,40 @@ export function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-sand-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-sand-50 flex items-center justify-center px-6 py-16">
       <div className="w-full max-w-sm">
-        <h1 className="font-serif text-3xl font-bold text-ink-900 mb-2">Create account</h1>
-        <p className="font-sans text-sm text-ink-400 mb-8">Start building your personal library.</p>
 
+        {/* ── En-tête page de garde ── */}
+        <div className="text-center mb-8">
+          <p className="font-sans text-xs tracking-[0.5em] mb-5">
+            <span className="text-ink-300">— </span>
+            <span className="text-terra-500">✦</span>
+            <span className="text-ink-300"> —</span>
+          </p>
+          <h1 className="font-serif text-3xl font-bold text-ink-900 tracking-[0.12em] mb-2">
+            Bookshelf
+          </h1>
+          <p className="font-serif italic text-sm text-ink-400">
+            Create your account
+          </p>
+        </div>
+
+        {/* ── Citation ── */}
+        <blockquote className="text-center mt-6 mb-8 px-2">
+          <p className="font-serif italic text-sm text-ink-400 leading-relaxed">
+            "There is no friend as loyal as a book."
+          </p>
+          <cite className="block mt-2 not-italic font-sans text-xs text-ink-300 tracking-widest uppercase">
+            Ernest Hemingway
+          </cite>
+        </blockquote>
+
+        {/* ── Filet ── */}
+        <div className="border-t border-terra-200 mb-8" />
+
+        {/* ── Formulaire ── */}
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
+
           {/* Email */}
           <div className="flex flex-col gap-1">
             <label htmlFor="email" className="font-sans text-sm font-medium text-ink-700">
@@ -137,12 +165,23 @@ export function SignUp() {
           </button>
         </form>
 
-        <p className="font-sans text-sm text-ink-400 text-center mt-6">
-          Already have an account?{' '}
-          <Link to="/signin" className="text-terra-500 hover:text-terra-600 font-medium transition-colors">
-            Sign in
-          </Link>
+        {/* ── Colophon ── */}
+        <div className="border-t border-terra-200 mt-8 pt-6 flex flex-col items-center gap-2.5">
+          <p className="font-sans text-xs text-ink-400">
+            Already have an account?{' '}
+            <Link to="/signin" className="text-terra-500 hover:text-terra-600 font-medium transition-colors">
+              Sign in
+            </Link>
+          </p>
+        </div>
+
+        {/* ── Ornement bas ── */}
+        <p className="mt-6 font-sans text-xs tracking-[0.5em] text-center">
+          <span className="text-ink-300">— </span>
+          <span className="text-terra-500">✦</span>
+          <span className="text-ink-300"> —</span>
         </p>
+
       </div>
     </div>
   );

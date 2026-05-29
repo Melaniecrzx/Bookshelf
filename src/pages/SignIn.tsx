@@ -30,12 +30,40 @@ export function SignIn() {
   };
 
   return (
-    <div className="min-h-screen bg-sand-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-sand-50 flex items-center justify-center px-6 py-16">
       <div className="w-full max-w-sm">
-        <h1 className="font-serif text-3xl font-bold text-ink-900 mb-2">Sign in</h1>
-        <p className="font-sans text-sm text-ink-400 mb-8">Welcome back to your library.</p>
 
+        {/* ── En-tête page de garde ── */}
+        <div className="text-center mb-8">
+          <p className="font-sans text-xs tracking-[0.5em] mb-5">
+            <span className="text-ink-300">— </span>
+            <span className="text-terra-500">✦</span>
+            <span className="text-ink-300"> —</span>
+          </p>
+          <h1 className="font-serif text-3xl font-bold text-ink-900 tracking-[0.12em] mb-2">
+            Bookshelf
+          </h1>
+          <p className="font-serif italic text-sm text-ink-400">
+            Sign in to your library
+          </p>
+        </div>
+
+        {/* ── Citation ── */}
+        <blockquote className="text-center mt-6 mb-8 px-2">
+          <p className="font-serif italic text-sm text-ink-400 leading-relaxed">
+            "A reader lives a thousand lives before he dies."
+          </p>
+          <cite className="block mt-2 not-italic font-sans text-xs text-ink-300 tracking-widest uppercase">
+            George R.R. Martin
+          </cite>
+        </blockquote>
+
+        {/* ── Filet ── */}
+        <div className="border-t border-terra-200 mb-8" />
+
+        {/* ── Formulaire ── */}
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
+
           {/* Email */}
           <div className="flex flex-col gap-1">
             <label htmlFor="email" className="font-sans text-sm font-medium text-ink-700">
@@ -109,21 +137,30 @@ export function SignIn() {
           </button>
         </form>
 
-        <div className="mt-6 flex flex-col items-center gap-3">
+        {/* ── Colophon ── */}
+        <div className="border-t border-terra-200 mt-8 pt-6 flex flex-col items-center gap-2.5">
           <button
             type="button"
             onClick={() => navigate('/library')}
-            className="font-sans text-sm text-ink-400 hover:text-ink-700 transition-colors"
+            className="font-sans text-xs text-ink-300 hover:text-ink-500 transition-colors"
           >
             Continue as guest
           </button>
-          <p className="font-sans text-sm text-ink-400">
+          <p className="font-sans text-xs text-ink-400">
             No account yet?{' '}
             <Link to="/signup" className="text-terra-500 hover:text-terra-600 font-medium transition-colors">
               Sign up
             </Link>
           </p>
         </div>
+
+        {/* ── Ornement bas ── */}
+        <p className="mt-6 font-sans text-xs tracking-[0.5em] text-center">
+          <span className="text-ink-300">— </span>
+          <span className="text-terra-500">✦</span>
+          <span className="text-ink-300"> —</span>
+        </p>
+
       </div>
     </div>
   );

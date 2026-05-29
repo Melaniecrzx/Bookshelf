@@ -63,9 +63,33 @@ body {
   --shelf-shadow: rgba(0, 0, 0, 0.08);
 }
 
+/* ── Auth split panel ────────────────────────────────── */
+:root {
+  --color-auth-panel:       #2C2C2C;
+  --color-auth-panel-fg:    rgba(255, 255, 255, 0.95);
+  --color-auth-panel-quote: rgba(255, 255, 255, 0.60);
+  --color-auth-panel-cite:  rgba(255, 255, 255, 0.35);
+  --color-auth-panel-sub:   rgba(255, 255, 255, 0.45);
+}
+
+.auth-panel-left {
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 768px) {
+  .auth-panel-left {
+    box-shadow: 8px 0 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
 /* ── Themes ─────────────────────────────────────────── */
 
 html[data-theme="dark"] {
+  --color-auth-panel:       #F2F2F7;
+  --color-auth-panel-fg:    rgba(28, 28, 30, 0.92);
+  --color-auth-panel-quote: rgba(28, 28, 30, 0.60);
+  --color-auth-panel-cite:  rgba(28, 28, 30, 0.40);
+  --color-auth-panel-sub:   rgba(28, 28, 30, 0.50);
   --shelf-top:    #3A3A3C;
   --shelf-body:   #2C2C2E;
   --shelf-shadow: rgba(0, 0, 0, 0.35);
@@ -102,6 +126,11 @@ html[data-theme="dark"] textarea {
 
 /* ── OLED Theme ──────────────────────────────────────── */
 html[data-theme="oled"] {
+  --color-auth-panel:       #F8F8F8;
+  --color-auth-panel-fg:    rgba(0, 0, 0, 0.90);
+  --color-auth-panel-quote: rgba(0, 0, 0, 0.60);
+  --color-auth-panel-cite:  rgba(0, 0, 0, 0.40);
+  --color-auth-panel-sub:   rgba(0, 0, 0, 0.50);
   --shelf-top:    #1A1A1A;
   --shelf-body:   #0A0A0A;
   --shelf-shadow: rgba(0, 0, 0, 0.6);
