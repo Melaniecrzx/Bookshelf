@@ -36,4 +36,7 @@ Utilise les Conventional Commits :
 - chore: maintenance, config, dépendances
 - docs: documentation
 
+- Ne jamais committer d'images ou de fichiers binaires
+- Conventional commits uniquement
+
 Exemple : "feat: add guest mode with mock data"
