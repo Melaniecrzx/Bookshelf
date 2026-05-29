@@ -91,7 +91,7 @@ export function DataSection() {
 
         if (parsed.length === 0) {
           setState("error");
-          setErrorMsg("Aucun livre valide trouvé dans ce fichier. Vérifie qu'il s'agit bien d'un export Goodreads.");
+          setErrorMsg("No valid books found in this file. Make sure it's a Goodreads library export.");
           return;
         }
 
@@ -122,7 +122,7 @@ export function DataSection() {
       },
       error: (err) => {
         setState("error");
-        setErrorMsg(`Erreur de parsing : ${err.message}`);
+        setErrorMsg(`Parsing error: ${err.message}`);
       },
     });
   };
@@ -144,9 +144,9 @@ export function DataSection() {
       <div className="bg-sand-100 border border-sand-300 rounded-2xl p-6">
         <div className="flex items-start justify-between gap-4 mb-5">
           <div>
-            <p className="font-sans text-sm font-semibold text-ink-900">Import depuis Goodreads</p>
+            <p className="font-sans text-sm font-semibold text-ink-900">Import from Goodreads</p>
             <p className="font-sans text-xs text-ink-400 mt-1">
-              Importe ta bibliothèque depuis un export CSV Goodreads.
+              Import your library from a Goodreads CSV export.
               <br />
               <a
                 href="https://www.goodreads.com/review/import"
@@ -154,7 +154,7 @@ export function DataSection() {
                 rel="noopener noreferrer"
                 className="text-terra-500 hover:underline"
               >
-                Exporter mes données Goodreads →
+                Export my Goodreads data →
               </a>
             </p>
           </div>
@@ -173,10 +173,10 @@ export function DataSection() {
             </div>
             <div className="text-center">
               <p className="font-sans text-sm font-medium text-ink-700">
-                Glisse ton fichier ici
+                Drop your file here
               </p>
               <p className="font-sans text-xs text-ink-400 mt-0.5">
-                ou <span className="text-terra-500 font-medium">parcourir</span> — fichier .csv uniquement
+                or <span className="text-terra-500 font-medium">browse</span> — .csv files only
               </p>
             </div>
             <input
@@ -194,7 +194,7 @@ export function DataSection() {
           <div className="flex items-center gap-3 py-4">
             <FileText size={18} className="text-ink-400 shrink-0" />
             <div className="flex-1">
-              <p className="font-sans text-sm text-ink-700">Lecture de <span className="font-medium">{fileName}</span>…</p>
+              <p className="font-sans text-sm text-ink-700">Reading <span className="font-medium">{fileName}</span>…</p>
               <div className="mt-2 h-1.5 bg-sand-300 rounded-full overflow-hidden">
                 <div className="h-full bg-terra-400 rounded-full animate-pulse w-1/3" />
               </div>
@@ -207,7 +207,7 @@ export function DataSection() {
           <div className="py-2">
             <div className="flex items-center justify-between mb-2">
               <p className="font-sans text-sm text-ink-700">
-                Import en cours… <span className="font-medium">{Math.round((progress / 100) * total)}</span> / {total} livres
+                Importing… <span className="font-medium">{Math.round((progress / 100) * total)}</span> / {total} books
               </p>
               <span className="font-sans text-xs text-ink-400">{progress}%</span>
             </div>
@@ -227,12 +227,12 @@ export function DataSection() {
               <CheckCircle2 size={18} className="text-green-500 mt-0.5 shrink-0" />
               <div>
                 <p className="font-sans text-sm font-semibold text-green-800">
-                  Import terminé !
+                  Import complete!
                 </p>
                 <p className="font-sans text-xs text-green-700 mt-0.5">
-                  <span className="font-medium">{imported}</span> livre{imported !== 1 ? "s" : ""} importé{imported !== 1 ? "s" : ""} avec succès
+                  <span className="font-medium">{imported}</span> book{imported !== 1 ? "s" : ""} successfully imported
                   {skipped > 0 && (
-                    <> · <span className="font-medium">{skipped}</span> ignoré{skipped !== 1 ? "s" : ""} (déjà présents)</>
+                    <> · <span className="font-medium">{skipped}</span> skipped (already in your library)</>
                   )}
                 </p>
               </div>
@@ -241,7 +241,7 @@ export function DataSection() {
               onClick={reset}
               className="self-start px-4 py-2 rounded-lg border border-sand-300 text-sm font-sans text-ink-700 hover:bg-sand-200 transition-colors"
             >
-              Importer un autre fichier
+              Import another file
             </button>
           </div>
         )}
@@ -252,7 +252,7 @@ export function DataSection() {
             <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl">
               <AlertCircle size={18} className="text-red-500 mt-0.5 shrink-0" />
               <div>
-                <p className="font-sans text-sm font-semibold text-red-800">Erreur lors de l'import</p>
+                <p className="font-sans text-sm font-semibold text-red-800">Import failed</p>
                 <p className="font-sans text-xs text-red-700 mt-0.5">{errorMsg}</p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export function DataSection() {
               onClick={reset}
               className="self-start px-4 py-2 rounded-lg border border-sand-300 text-sm font-sans text-ink-700 hover:bg-sand-200 transition-colors"
             >
-              Réessayer
+              Try again
             </button>
           </div>
         )}
@@ -268,13 +268,13 @@ export function DataSection() {
 
       {/* Instructions card */}
       <div className="bg-sand-100 border border-sand-300 rounded-2xl p-5">
-        <p className="font-sans text-xs font-semibold text-ink-700 mb-2">Comment obtenir ton export Goodreads ?</p>
+        <p className="font-sans text-xs font-semibold text-ink-700 mb-2">How to get your Goodreads export?</p>
         <ol className="font-sans text-xs text-ink-500 flex flex-col gap-1.5 list-decimal list-inside">
-          <li>Va sur <span className="font-medium text-ink-700">goodreads.com</span> → Mon compte → Mes livres</li>
-          <li>Clique sur <span className="font-medium text-ink-700">Import/Export</span> dans la barre latérale</li>
-          <li>Clique sur <span className="font-medium text-ink-700">Export Library</span></li>
-          <li>Télécharge le fichier <span className="font-medium text-ink-700">goodreads_library_export.csv</span></li>
-          <li>Importe-le ici</li>
+          <li>Go to <span className="font-medium text-ink-700">goodreads.com</span> → My Account → My Books</li>
+          <li>Click <span className="font-medium text-ink-700">Import/Export</span> in the sidebar</li>
+          <li>Click <span className="font-medium text-ink-700">Export Library</span></li>
+          <li>Download the <span className="font-medium text-ink-700">goodreads_library_export.csv</span> file</li>
+          <li>Import it here</li>
         </ol>
       </div>
     </div>
