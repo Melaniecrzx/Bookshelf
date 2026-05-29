@@ -4,6 +4,7 @@ import { SettingsMobileTabs } from "../components/settings/SettingsMobileTabs";
 import { AppearanceSection } from "../components/settings/AppearanceSection";
 import { ReadingSection } from "../components/settings/ReadingSection";
 import { DangerSection } from "../components/settings/DangerSection";
+import { DataSection } from "../components/settings/DataSection";
 import { PlaceholderSection } from "../components/settings/PlaceholderSection";
 
 const sectionMeta: Record<SectionId, { title: string; subtitle: string }> = {
@@ -47,7 +48,7 @@ export function AppearancePage() {
           {section === "account"       && <PlaceholderSection title="Account" />}
           {section === "notifications" && <PlaceholderSection title="Notifications" />}
           {section === "privacy"       && <PlaceholderSection title="Privacy & Sharing" />}
-          {section === "data"          && <PlaceholderSection title="Data" />}
+          {section === "data"          && <DataSection />}
         </div>
       </div>
     </div>

@@ -227,6 +227,155 @@ export const useUpdateBook = () => {
   });
 };
 
+// ─── Import from CSV ────────────────────────────────────────────────────────
+
+export interface ImportBookPayload {
+  title: string;
+  author: string;
+  isbn: string | null;
+  pages: number | null;
+  published_year: number | null;
+  rating: number | null;
+  /** "read" | "currently-reading" | "to-read" */
+  exclusive_shelf: string;
+  date_finished: string | null;
+}
+
+const SHELF_NAME_MAP: Record<string, string> = {
+  read: "Read",
+  "currently-reading": "Currently Reading",
+  "to-read": "Want to Read",
+};
+
+export const useImportBooks = () => {
+  const { session } = useAuth();
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (books: ImportBookPayload[]) => {
+      if (!session) {
+        // Guest mode: store in localStorage
+        const existing = loadGuestBooks();
+        const toAdd: Book[] = books.map((b) => {
+          const id = crypto.randomUUID();
+          const status: ReadingStatus =
+            b.exclusive_shelf === "read"
+              ? "read"
+              : b.exclusive_shelf === "currently-reading"
+                ? "reading"
+                : "to-read";
+          return {
+            id,
+            user_book_id: id,
+            title: b.title,
+            author: b.author,
+            isbn: b.isbn,
+            cover_url: null,
+            pages: b.pages,
+            published_year: b.published_year,
+            genres: [],
+            description: null,
+            status,
+            rating: b.rating,
+            shelf_id: statusToGuestShelfId(status),
+            date_finished: b.date_finished,
+          };
+        });
+        saveGuestBooks([...existing, ...toAdd]);
+        return books.length;
+      }
+
+      // Fetch user shelves once
+      const { data: shelves } = await supabase
+        .from("shelves")
+        .select("id, name")
+        .eq("user_id", session.user.id);
+
+      const shelfMap: Record<string, string> = {};
+      (shelves ?? []).forEach((s: { id: string; name: string }) => {
+        shelfMap[s.name] = s.id;
+      });
+
+      let imported = 0;
+
+      for (const b of books) {
+        try {
+          // Resolve shelf id
+          const shelfName = SHELF_NAME_MAP[b.exclusive_shelf] ?? "Want to Read";
+          const shelfId = shelfMap[shelfName];
+
+          // Check book existence by isbn or title+author
+          let bookId: string | undefined;
+
+          if (b.isbn) {
+            const { data: existing } = await supabase
+              .from("books")
+              .select("id")
+              .eq("isbn", b.isbn)
+              .maybeSingle();
+            bookId = existing?.id;
+          }
+
+          if (!bookId) {
+            const { data: byTitle } = await supabase
+              .from("books")
+              .select("id")
+              .ilike("title", b.title.trim())
+              .ilike("author", b.author.trim())
+              .maybeSingle();
+            bookId = byTitle?.id;
+          }
+
+          if (!bookId) {
+            const { data: newBook, error } = await supabase
+              .from("books")
+              .insert({
+                title: b.title,
+                author: b.author,
+                isbn: b.isbn,
+                pages: b.pages,
+                published_year: b.published_year,
+                cover_url: null,
+                genres: [],
+              })
+              .select("id")
+              .single();
+            if (error) continue;
+            bookId = newBook.id;
+          }
+
+          // Check if user already has this book
+          const { data: alreadyOwned } = await supabase
+            .from("user_books")
+            .select("id")
+            .eq("user_id", session.user.id)
+            .eq("book_id", bookId)
+            .maybeSingle();
+
+          if (alreadyOwned) continue;
+
+          await supabase.from("user_books").insert({
+            user_id: session.user.id,
+            book_id: bookId,
+            shelf_id: shelfId ?? null,
+            rating: b.rating ?? null,
+            date_finished: b.date_finished ?? null,
+          });
+
+          imported++;
+        } catch {
+          // skip individual failures silently
+        }
+      }
+
+      return imported;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["books"] });
+    },
+  });
+};
+
 export const useShelves = () => {
   const { session } = useAuth();
   return useQuery<Shelf[]>({
