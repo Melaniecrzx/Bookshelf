@@ -98,6 +98,35 @@ export function DashboardPage() {
           </button>
         </div>
         <div className="py-8 flex flex-col gap-10">
+          {addingShelf && (
+            <div className="px-6 flex items-center gap-1.5">
+              <input
+                ref={inputRef}
+                type="text"
+                value={newShelfName}
+                onChange={(e) => setNewShelfName(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleCreateShelf();
+                  if (e.key === "Escape") cancelNewShelf();
+                }}
+                placeholder="Shelf name..."
+                className="flex-1 min-w-0 h-8 md:h-9 px-2.5 md:px-3 rounded-lg border border-sand-300 bg-white font-sans text-xs md:text-sm text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-terra-400"
+              />
+              <button
+                onClick={handleCreateShelf}
+                disabled={!newShelfName.trim() || isCreating}
+                className="shrink-0 h-8 md:h-9 px-2.5 md:px-4 rounded-lg bg-terra-500 text-white font-sans text-xs md:text-sm font-medium hover:bg-terra-600 transition-colors disabled:opacity-40"
+              >
+                Create
+              </button>
+              <button
+                onClick={cancelNewShelf}
+                className="shrink-0 h-8 md:h-9 px-2.5 md:px-4 rounded-lg border border-sand-300 font-sans text-xs md:text-sm text-ink-500 hover:text-ink-700 transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
           {orderedShelves.map((shelf, index) => (
             <ShelfSection
               key={shelf.id}
@@ -111,35 +140,6 @@ export function DashboardPage() {
               animationDelay={index * 0.07}
             />
           ))}
-          {addingShelf && (
-            <div className="px-6 flex items-center gap-2">
-              <input
-                ref={inputRef}
-                type="text"
-                value={newShelfName}
-                onChange={(e) => setNewShelfName(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleCreateShelf();
-                  if (e.key === "Escape") cancelNewShelf();
-                }}
-                placeholder="Shelf name..."
-                className="flex-1 h-9 px-3 rounded-lg border border-sand-300 bg-white font-sans text-sm text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-terra-400"
-              />
-              <button
-                onClick={handleCreateShelf}
-                disabled={!newShelfName.trim() || isCreating}
-                className="h-9 px-4 rounded-lg bg-terra-500 text-white font-sans text-sm font-medium hover:bg-terra-600 transition-colors disabled:opacity-40"
-              >
-                Create
-              </button>
-              <button
-                onClick={cancelNewShelf}
-                className="h-9 px-4 rounded-lg border border-sand-300 font-sans text-sm text-ink-500 hover:text-ink-700 transition-colors"
-              >
-                Cancel
-              </button>
-            </div>
-          )}
         </div>
       </div>
 
