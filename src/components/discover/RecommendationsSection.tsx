@@ -1,4 +1,4 @@
-import { Sparkles, Lock } from "lucide-react";
+import { Sparkles, Lock, RefreshCw } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRecommendations } from "@/hooks/useRecommendations";
@@ -7,7 +7,8 @@ import { RecommendationCard } from "./RecommendationCard";
 export function RecommendationsSection() {
   const { session } = useAuth();
   const navigate = useNavigate();
-  const { mutate, isPending, data, isError, reset } = useRecommendations();
+  const { recommendations, isPending, isError, generate, refresh } =
+    useRecommendations();
 
   // ── Mode invité ────────────────────────────────────────────────────────────
   if (!session) {
@@ -15,9 +16,7 @@ export function RecommendationsSection() {
       <section className="mt-10">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles size={16} strokeWidth={1.75} className="text-terra-500" />
-          <h2 className="font-serif text-xl font-bold text-ink-900">
-            For you
-          </h2>
+          <h2 className="font-serif text-xl font-bold text-ink-900">For you</h2>
         </div>
 
         <div className="flex flex-col items-center gap-4 py-10 px-6 rounded-2xl bg-sand-100 border border-sand-200 text-center">
@@ -54,21 +53,33 @@ export function RecommendationsSection() {
   // ── Utilisateur connecté ───────────────────────────────────────────────────
   return (
     <section className="mt-10">
-      <div className="flex items-center gap-2 mb-4">
-        <Sparkles size={16} strokeWidth={1.75} className="text-terra-500" />
-        <h2 className="font-serif text-xl font-bold text-ink-900">
-          For you
-        </h2>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <Sparkles size={16} strokeWidth={1.75} className="text-terra-500" />
+          <h2 className="font-serif text-xl font-bold text-ink-900">For you</h2>
+        </div>
+
+        {/* Bouton Refresh — visible seulement si des résultats sont affichés */}
+        {recommendations && !isPending && (
+          <button
+            onClick={refresh}
+            className="flex items-center gap-1.5 font-sans text-xs font-semibold text-ink-400 hover:text-terra-500 transition-colors"
+          >
+            <RefreshCw size={13} strokeWidth={2.25} />
+            Refresh
+          </button>
+        )}
       </div>
 
       {/* État initial — bouton */}
-      {!data && !isPending && !isError && (
+      {!recommendations && !isPending && !isError && (
         <div className="flex flex-col items-center gap-3 py-10 px-6 rounded-2xl bg-sand-100 border border-sand-200 text-center">
           <p className="font-sans text-sm text-ink-400 leading-relaxed max-w-xs">
             We'll pick 5 books based on your reading history and ratings.
           </p>
           <button
-            onClick={() => mutate()}
+            onClick={generate}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-terra-500 hover:bg-terra-600 font-sans text-sm font-semibold text-white transition-colors"
           >
             <Sparkles size={15} strokeWidth={2} />
@@ -94,7 +105,7 @@ export function RecommendationsSection() {
             Something went wrong. Please try again.
           </p>
           <button
-            onClick={() => { reset(); mutate(); }}
+            onClick={refresh}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-terra-500 hover:bg-terra-600 font-sans text-sm font-semibold text-white transition-colors"
           >
             Try again
@@ -103,9 +114,9 @@ export function RecommendationsSection() {
       )}
 
       {/* Résultats */}
-      {data && data.length > 0 && (
+      {recommendations && recommendations.length > 0 && (
         <div className="flex flex-col gap-3">
-          {data.map((rec, i) => (
+          {recommendations.map((rec, i) => (
             <RecommendationCard
               key={i}
               title={rec.title}
@@ -113,15 +124,6 @@ export function RecommendationsSection() {
               reason={rec.reason}
             />
           ))}
-
-          {/* Relancer */}
-          <button
-            onClick={() => { reset(); mutate(); }}
-            className="self-center mt-1 inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-terra-500 hover:text-terra-600 transition-colors"
-          >
-            <Sparkles size={13} strokeWidth={2} />
-            Refresh suggestions
-          </button>
         </div>
       )}
     </section>
