@@ -72,6 +72,7 @@ export function SearchPage() {
         value={input}
         onChange={setInput}
         placeholder="Title, author or ISBN…"
+        autoFocus
       />
 
       {showResults && (

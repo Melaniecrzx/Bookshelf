@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Library, BarChart2, Target, Settings, Compass } from "lucide-react";
 import { NavDesktop } from "./nav/NavDesktop";
 import { NavMobile } from "./nav/NavMobile";
@@ -24,16 +24,11 @@ const allLinks = [...leftLinks, ...rightLinks];
 export function Nav({ counts }: NavProps) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams] = useSearchParams();
-  const qParam =
-    location.pathname === "/search" ? (searchParams.get("q") ?? "") : "";
-  const [query, setQuery] = useState(qParam);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    setQuery(
-      location.pathname === "/search" ? (searchParams.get("q") ?? "") : "",
-    );
-  }, [location.pathname, qParam]);
+    setQuery("");
+  }, [location.pathname]);
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter" && query.trim()) {
