@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { Search, LogOut } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -22,12 +22,12 @@ export function NavDesktop({ links, query, onQueryChange, onKeyDown }: NavDeskto
   return (
     <header className="hidden md:block fixed top-0 left-0 right-0 bg-sand-100 border-b border-sand-300 z-20">
       <div className="px-6 py-3.5 border-b border-sand-200 flex items-center">
-        <div className="flex items-center gap-2.5 flex-1">
+        <Link to="/library" className="flex items-center gap-2.5 flex-1 w-fit">
           <BookshelfLogo size={28} />
           <span className="font-serif text-xl font-bold text-ink-900 tracking-tight">
             Bookshelf
           </span>
-        </div>
+        </Link>
         <div className="relative w-[480px]">
           <Search
             size={13}
