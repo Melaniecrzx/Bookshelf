@@ -158,7 +158,7 @@ export function ShelfSection({
           <p className="text-sm font-sans text-ink-400 italic pb-3">{emptyMessage}</p>
         ) : (
           <div className="flex gap-2.5 overflow-x-auto scrollbar-hide pb-0.5">
-            {books.map((book) => (
+            {books.slice(0, 12).map((book) => (
               <ShelfBook key={book.id} book={book} onClick={() => onBookClick(book)} />
             ))}
           </div>
