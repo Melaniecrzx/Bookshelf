@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useSearchParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { useGoogleBooks } from "../hooks/useGoogleBooks";
+import { useHardcoverSearch } from "../hooks/useHardcoverSearch";
 import { useBooks, useAddBook } from "../hooks/useBooks";
 import { useGuestGuard } from "../hooks/useGuestGuard";
 import { useDebounce } from "../hooks/useDebounce";
@@ -11,7 +11,7 @@ import { SearchInput } from "../components/ui/SearchInput";
 import { SearchResultModal } from "../components/SearchResultModal";
 import { SearchResultItem } from "../components/search/SearchResultItem";
 import { SearchStateView } from "../components/search/SearchStateView";
-import type { GoogleBookResult } from "../hooks/useGoogleBooks";
+import type { GoogleBookResult } from "../hooks/useHardcoverSearch";
 
 export function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -29,7 +29,7 @@ export function SearchPage() {
   const [input, setInput] = useState(qParam);
   const debouncedQuery = useDebounce(input, 500);
 
-  const { data, isFetching, isError } = useGoogleBooks(debouncedQuery);
+  const { data, isFetching, isError } = useHardcoverSearch(debouncedQuery);
 
   useEffect(() => {
     setInput(qParam);
