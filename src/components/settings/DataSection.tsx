@@ -1,7 +1,41 @@
 import { useRef, useState } from "react";
 import Papa from "papaparse";
-import { Upload, CheckCircle2, AlertCircle, FileText } from "lucide-react";
-import { useImportBooks, type ImportBookPayload } from "../../hooks/useBooks";
+import { Upload, Download, CheckCircle2, AlertCircle, FileText } from "lucide-react";
+import { useImportBooks, useBooks, type ImportBookPayload } from "../../hooks/useBooks";
+import type { Book } from "../../types/book";
+
+// ─── Export helpers ──────────────────────────────────────────────────────────
+
+const STATUS_TO_SHELF: Record<string, string> = {
+  read: "read",
+  reading: "currently-reading",
+  "to-read": "to-read",
+};
+
+function bookToCsvRow(b: Book) {
+  return {
+    Title: b.title,
+    Author: b.author,
+    ISBN13: b.isbn ?? "",
+    "Number of Pages": b.pages ?? "",
+    "Original Publication Year": b.published_year ?? "",
+    "My Rating": b.rating ?? 0,
+    "Exclusive Shelf": STATUS_TO_SHELF[b.status] ?? "to-read",
+    "Date Read": b.date_finished ?? "",
+    Genres: (b.genres ?? []).join(", "),
+  };
+}
+
+function downloadCsv(rows: ReturnType<typeof bookToCsvRow>[], filename: string) {
+  const csv = Papa.unparse(rows);
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
 // Goodreads exports ISBN13 as ="9780..." — strip the ="..." wrapper
 function cleanIsbn(raw: string): string | null {
@@ -57,6 +91,13 @@ type ImportState = "idle" | "parsing" | "importing" | "done" | "error";
 export function DataSection() {
   const fileRef = useRef<HTMLInputElement>(null);
   const { mutateAsync: importBooks } = useImportBooks();
+  const { books } = useBooks();
+
+  const handleExport = () => {
+    const rows = books.map(bookToCsvRow);
+    const date = new Date().toISOString().slice(0, 10);
+    downloadCsv(rows, `bookshelf-export-${date}.csv`);
+  };
 
   const [state, setState] = useState<ImportState>("idle");
   const [progress, setProgress] = useState(0);      // 0–100
@@ -264,6 +305,26 @@ export function DataSection() {
             </button>
           </div>
         )}
+      </div>
+
+      {/* Export Card */}
+      <div className="bg-sand-100 border border-sand-300 rounded-2xl p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="font-sans text-sm font-semibold text-ink-900">Export your library</p>
+            <p className="font-sans text-xs text-ink-400 mt-1">
+              Download all your books as a CSV file — {books.length} book{books.length !== 1 ? "s" : ""} in your library.
+            </p>
+          </div>
+          <button
+            onClick={handleExport}
+            disabled={books.length === 0}
+            className="shrink-0 flex items-center gap-2 px-4 py-2 rounded-lg border border-sand-300 text-sm font-sans text-ink-700 hover:bg-sand-200 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <Download size={14} strokeWidth={1.75} />
+            Export CSV
+          </button>
+        </div>
       </div>
 
       {/* Instructions card */}
