@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Plus, Check } from "lucide-react";
 import { BookCover } from "../ui/BookCover";
-import { useGoogleBooks } from "@/hooks/useGoogleBooks";
+import { useHardcoverSearch } from "@/hooks/useHardcoverSearch";
 import { useBooks, useAddBook } from "@/hooks/useBooks";
 import { toBook } from "@/utils/googleBook";
 
@@ -17,7 +17,7 @@ export function RecommendationCard({
   reason,
 }: RecommendationCardProps) {
   const query = `intitle:${title} inauthor:${author}`;
-  const { data: googleData, isLoading: coverLoading } = useGoogleBooks(query);
+  const { data: googleData, isLoading: coverLoading } = useHardcoverSearch(query);
   const googleResult = googleData?.[0] ?? null;
 
   const { books: libraryBooks } = useBooks();

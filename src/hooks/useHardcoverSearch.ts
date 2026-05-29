@@ -1,8 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/supabase-client";
-// Re-export du type pour que les consommateurs n'aient pas à changer leur import
-export type { GoogleBookResult } from "./useGoogleBooks";
-import type { GoogleBookResult } from "./useGoogleBooks";
+
+export interface GoogleBookResult {
+  googleId: string;
+  title: string;
+  authors: string[];
+  coverUrl: string | null;
+  isbn13: string | null;
+  isbn10: string | null;
+  pageCount: number | null;
+  publishedDate: string;
+  genres: string[];
+  description: string | null;
+  publisher: string;
+}
 
 // ── Types internes Hardcover ──────────────────────────────────────────────────
 

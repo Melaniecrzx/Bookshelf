@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: Bookshelf
+        - generic [ref=e7]:
+          - img
+          - textbox "Search books..." [ref=e8]
+      - navigation [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+          - text: Home
+        - link "Reading 4" [ref=e14] [cursor=pointer]:
+          - /url: /reading
+          - img [ref=e15]
+          - text: Reading
+          - generic [ref=e17]: "4"
+        - link "To Read 18" [ref=e18] [cursor=pointer]:
+          - /url: /to-read
+          - img [ref=e19]
+          - text: To Read
+          - generic [ref=e21]: "18"
+        - link "Read 22" [ref=e22] [cursor=pointer]:
+          - /url: /read
+          - img [ref=e23]
+          - text: Read
+          - generic [ref=e26]: "22"
+        - link "Stats" [ref=e27] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e28]
+          - text: Stats
+    - main [ref=e29]:
+      - generic [ref=e355]:
+        - generic [ref=e356]:
+          - generic [ref=e357]:
+            - heading "Currently Reading" [level=1] [ref=e358]
+            - generic [ref=e359]: "4"
+          - paragraph [ref=e360]: Your current reads
+        - generic [ref=e361]:
+          - generic [ref=e362]:
+            - generic [ref=e363]:
+              - img
+              - textbox "Search by title or author…" [ref=e364]
+            - button "All categories" [ref=e366]:
+              - generic [ref=e367]: All categories
+              - img [ref=e368]
+          - generic [ref=e370]:
+            - generic [ref=e371] [cursor=pointer]:
+              - img "1984" [ref=e373]
+              - generic [ref=e374]:
+                - heading "1984" [level=3] [ref=e375]
+                - paragraph [ref=e376]: George Orwell
+                - paragraph [ref=e380]: 210 / 328 pages
+                - generic [ref=e381]:
+                  - generic [ref=e382]: Fiction
+                  - generic [ref=e383]: Dystopian
+            - generic [ref=e384] [cursor=pointer]:
+              - img "Circe" [ref=e386]
+              - generic [ref=e387]:
+                - heading "Circe" [level=3] [ref=e388]
+                - paragraph [ref=e389]: Madeline Miller
+                - paragraph [ref=e393]: 150 / 393 pages
+                - generic [ref=e394]:
+                  - generic [ref=e395]: Fiction
+                  - generic [ref=e396]: Mythology
+            - generic [ref=e397] [cursor=pointer]:
+              - img "Dune" [ref=e399]
+              - generic [ref=e400]:
+                - heading "Dune" [level=3] [ref=e401]
+                - paragraph [ref=e402]: Frank Herbert
+                - paragraph [ref=e406]: 320 / 688 pages
+                - generic [ref=e407]:
+                  - generic [ref=e408]: Sci-Fi & Fantasy
+                  - generic [ref=e409]: Science Fiction
+            - generic [ref=e410] [cursor=pointer]:
+              - img "Designing Data-Intensive Applications" [ref=e412]
+              - generic [ref=e413]:
+                - heading "Designing Data-Intensive Applications" [level=3] [ref=e414]
+                - paragraph [ref=e415]: Martin Kleppmann
+                - paragraph [ref=e419]: 180 / 616 pages
+                - generic [ref=e420]:
+                  - generic [ref=e421]: Tech & Programming
+                  - generic [ref=e422]: Systems Design
+  - generic [ref=e423]: Programming

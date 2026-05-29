@@ -1,0 +1,180 @@
+- generic [ref=e3]:
+  - banner [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - img [ref=e24]
+        - generic [ref=e28]: Bookshelf
+      - generic [ref=e29]:
+        - img
+        - textbox "Search books… (press Enter)" [ref=e30]
+      - button "Sign out" [ref=e32]:
+        - img [ref=e33]
+        - text: Sign out
+    - navigation [ref=e36]:
+      - link "Library" [ref=e37] [cursor=pointer]:
+        - /url: /library
+        - img [ref=e38]
+        - text: Library
+      - link "Discover" [ref=e40] [cursor=pointer]:
+        - /url: /discover
+        - img [ref=e41]
+        - text: Discover
+      - link "Goals" [ref=e44] [cursor=pointer]:
+        - /url: /goals
+        - img [ref=e45]
+        - text: Goals
+      - link "Stats" [ref=e49] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e50]
+        - text: Stats
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e52]
+        - text: Settings
+  - main [ref=e4]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - heading "Your Library" [level=1] [ref=e57]
+        - button "New Shelf" [ref=e58]:
+          - img [ref=e59]
+          - text: New Shelf
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - heading "Want to Read" [level=2] [ref=e64]
+              - generic [ref=e65]: "18"
+            - link "View more" [ref=e67] [cursor=pointer]:
+              - /url: /library/shelf/guest-shelf-want
+              - text: View more
+              - img [ref=e68]
+          - generic [ref=e71]:
+            - 'generic "The Body: A Guide for Occupants — Bill Bryson" [ref=e72] [cursor=pointer]':
+              - 'img "The Body: A Guide for Occupants" [ref=e74]'
+            - 'generic "Quiet: The Power of Introverts in a World That Can''t Stop Talking — Susan Cain" [ref=e75] [cursor=pointer]':
+              - 'img "Quiet: The Power of Introverts in a World That Can''t Stop Talking" [ref=e77]'
+            - 'generic "Range: Why Generalists Triumph in a Specialized World — David Epstein" [ref=e78] [cursor=pointer]':
+              - 'img "Range: Why Generalists Triumph in a Specialized World" [ref=e80]'
+            - 'generic "Say Nothing: A True Story of Murder and Memory in Northern Ireland — Patrick Radden Keefe" [ref=e81] [cursor=pointer]':
+              - 'img "Say Nothing: A True Story of Murder and Memory in Northern Ireland" [ref=e83]'
+            - generic "The Left Hand of Darkness — Ursula K. Le Guin" [ref=e84] [cursor=pointer]:
+              - img "The Left Hand of Darkness" [ref=e86]
+            - generic "Piranesi — Susanna Clarke" [ref=e87] [cursor=pointer]:
+              - generic [ref=e90]: P
+            - generic "Children of Time — Adrian Tchaikovsky" [ref=e91] [cursor=pointer]:
+              - img "Children of Time" [ref=e93]
+            - generic "The Dispossessed — Ursula K. Le Guin" [ref=e94] [cursor=pointer]:
+              - generic [ref=e97]: TD
+            - generic "Digital Minimalism — Cal Newport" [ref=e98] [cursor=pointer]:
+              - img "Digital Minimalism" [ref=e100]
+            - 'generic "Four Thousand Weeks: Time Management for Mortals — Oliver Burkeman" [ref=e101] [cursor=pointer]':
+              - generic [ref=e104]: FT
+            - 'generic "Essentialism: The Disciplined Pursuit of Less — Greg McKeown" [ref=e105] [cursor=pointer]':
+              - 'img "Essentialism: The Disciplined Pursuit of Less" [ref=e107]'
+            - generic "Thinking in Bets — Annie Duke" [ref=e108] [cursor=pointer]:
+              - generic [ref=e111]: TI
+            - generic "The Obstacle Is the Way — Ryan Holiday" [ref=e112] [cursor=pointer]:
+              - img "The Obstacle Is the Way" [ref=e114]
+            - generic "The Pragmatic Programmer — David Thomas, Andrew Hunt" [ref=e115] [cursor=pointer]:
+              - img "The Pragmatic Programmer" [ref=e117]
+            - generic "A Philosophy of Software Design — John Ousterhout" [ref=e118] [cursor=pointer]:
+              - generic [ref=e121]: AP
+            - generic "The Mythical Man-Month — Frederick P. Brooks Jr." [ref=e122] [cursor=pointer]:
+              - img "The Mythical Man-Month" [ref=e124]
+            - generic "Don't Make Me Think — Steve Krug" [ref=e125] [cursor=pointer]:
+              - img "Don't Make Me Think" [ref=e127]
+            - generic "Eloquent JavaScript — Marijn Haverbeke" [ref=e128] [cursor=pointer]:
+              - img "Eloquent JavaScript" [ref=e130]
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - heading "Currently Reading" [level=2] [ref=e137]
+              - generic [ref=e138]: "3"
+            - link "View more" [ref=e140] [cursor=pointer]:
+              - /url: /library/shelf/guest-shelf-reading
+              - text: View more
+              - img [ref=e141]
+          - generic [ref=e144]:
+            - generic "1984 — George Orwell" [ref=e149] [cursor=pointer]:
+              - img "1984" [ref=e151]
+            - generic "Circe — Madeline Miller" [ref=e153] [cursor=pointer]:
+              - img "Circe" [ref=e155]
+            - generic "Dune — Frank Herbert" [ref=e157] [cursor=pointer]:
+              - img "Dune" [ref=e159]
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Read" [level=2] [ref=e167]
+              - generic [ref=e168]: "24"
+            - link "View more" [ref=e170] [cursor=pointer]:
+              - /url: /library/shelf/guest-shelf-read
+              - text: View more
+              - img [ref=e171]
+          - generic [ref=e174]:
+            - generic "The Great Gatsby — F. Scott Fitzgerald" [ref=e288] [cursor=pointer]:
+              - img "The Great Gatsby" [ref=e290]
+            - generic "To Kill a Mockingbird — Harper Lee" [ref=e175] [cursor=pointer]:
+              - img "To Kill a Mockingbird" [ref=e177]
+            - generic "Pride and Prejudice — Jane Austen" [ref=e178] [cursor=pointer]:
+              - img "Pride and Prejudice" [ref=e180]
+            - generic "The Catcher in the Rye — J.D. Salinger" [ref=e181] [cursor=pointer]:
+              - img "The Catcher in the Rye" [ref=e183]
+            - generic "Beloved — Toni Morrison" [ref=e184] [cursor=pointer]:
+              - img "Beloved" [ref=e186]
+            - generic "The Road — Cormac McCarthy" [ref=e187] [cursor=pointer]:
+              - img "The Road" [ref=e189]
+            - generic "Normal People — Sally Rooney" [ref=e190] [cursor=pointer]:
+              - img "Normal People" [ref=e192]
+            - generic "A Gentleman in Moscow — Amor Towles" [ref=e193] [cursor=pointer]:
+              - img "A Gentleman in Moscow" [ref=e195]
+            - 'generic "Sapiens: A Brief History of Humankind — Yuval Noah Harari" [ref=e196] [cursor=pointer]':
+              - 'img "Sapiens: A Brief History of Humankind" [ref=e198]'
+            - generic "Educated — Tara Westover" [ref=e199] [cursor=pointer]:
+              - img "Educated" [ref=e201]
+            - generic "The Immortal Life of Henrietta Lacks — Rebecca Skloot" [ref=e202] [cursor=pointer]:
+              - img "The Immortal Life of Henrietta Lacks" [ref=e204]
+            - generic "Thinking, Fast and Slow — Daniel Kahneman" [ref=e205] [cursor=pointer]:
+              - img "Thinking, Fast and Slow" [ref=e207]
+            - generic "Born a Crime — Trevor Noah" [ref=e208] [cursor=pointer]:
+              - img "Born a Crime" [ref=e210]
+            - generic "Atomic Habits — James Clear" [ref=e211] [cursor=pointer]:
+              - img "Atomic Habits" [ref=e213]
+            - generic "Neuromancer — William Gibson" [ref=e214] [cursor=pointer]:
+              - img "Neuromancer" [ref=e216]
+            - generic "The Name of the Wind — Patrick Rothfuss" [ref=e217] [cursor=pointer]:
+              - img "The Name of the Wind" [ref=e219]
+            - generic "Project Hail Mary — Andy Weir" [ref=e220] [cursor=pointer]:
+              - img "Project Hail Mary" [ref=e222]
+            - generic "The Fifth Season — N.K. Jemisin" [ref=e223] [cursor=pointer]:
+              - img "The Fifth Season" [ref=e225]
+            - generic "Ancillary Justice — Ann Leckie" [ref=e226] [cursor=pointer]:
+              - img "Ancillary Justice" [ref=e228]
+            - generic "Deep Work — Cal Newport" [ref=e229] [cursor=pointer]:
+              - img "Deep Work" [ref=e231]
+            - generic "The Psychology of Money — Morgan Housel" [ref=e232] [cursor=pointer]:
+              - img "The Psychology of Money" [ref=e234]
+            - generic "Clean Code — Robert C. Martin" [ref=e235] [cursor=pointer]:
+              - img "Clean Code" [ref=e237]
+            - generic "Designing Data-Intensive Applications — Martin Kleppmann" [ref=e238] [cursor=pointer]:
+              - img "Designing Data-Intensive Applications" [ref=e240]
+            - 'generic "Refactoring: Improving the Design of Existing Code — Martin Fowler" [ref=e241] [cursor=pointer]':
+              - 'img "Refactoring: Improving the Design of Existing Code" [ref=e243]'
+    - generic [ref=e293]:
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - paragraph [ref=e296]: You just finished
+          - heading "The Great Gatsby" [level=2] [ref=e297]
+        - generic [ref=e298]:
+          - button [ref=e299] [cursor=pointer]:
+            - img [ref=e300]
+          - button [ref=e302] [cursor=pointer]:
+            - img [ref=e303]
+          - button [ref=e305] [cursor=pointer]:
+            - img [ref=e306]
+          - button [ref=e308] [cursor=pointer]:
+            - img [ref=e309]
+          - button [ref=e311] [cursor=pointer]:
+            - img [ref=e312]
+      - generic [ref=e314]:
+        - button "Dismiss" [ref=e315]
+        - button "Save" [ref=e316]

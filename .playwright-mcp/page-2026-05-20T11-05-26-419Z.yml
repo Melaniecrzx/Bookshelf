@@ -1,0 +1,249 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]: Bookshelf
+    - navigation [ref=e6]:
+      - link "Accueil" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+        - text: Accueil
+      - link "En cours 5" [ref=e11] [cursor=pointer]:
+        - /url: /reading
+        - img [ref=e12]
+        - text: En cours
+        - generic [ref=e14]: "5"
+      - link "À lire 18" [ref=e15] [cursor=pointer]:
+        - /url: /to-read
+        - img [ref=e16]
+        - text: À lire
+        - generic [ref=e18]: "18"
+      - link "Lu 22" [ref=e19] [cursor=pointer]:
+        - /url: /read
+        - img [ref=e20]
+        - text: Lu
+        - generic [ref=e23]: "22"
+      - link "Stats" [ref=e24] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e25]
+        - text: Stats
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - heading "Lu" [level=1] [ref=e30]
+          - generic [ref=e31]: "22"
+        - paragraph [ref=e32]: Tous les livres que vous avez terminés
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - img
+            - textbox "Rechercher un titre ou un auteur…" [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38] [cursor=pointer]: Biography
+            - generic [ref=e39] [cursor=pointer]: Classics
+            - generic [ref=e40] [cursor=pointer]: Contemporary
+            - generic [ref=e41] [cursor=pointer]: Cyberpunk
+            - generic [ref=e42] [cursor=pointer]: Decision Making
+            - generic [ref=e43] [cursor=pointer]: Dystopian
+            - generic [ref=e44] [cursor=pointer]: Fantasy
+            - generic [ref=e45] [cursor=pointer]: Fiction
+            - generic [ref=e46] [cursor=pointer]: Finance
+            - generic [ref=e47] [cursor=pointer]: Historical Fiction
+            - generic [ref=e48] [cursor=pointer]: History
+            - generic [ref=e49] [cursor=pointer]: Humor
+            - generic [ref=e50] [cursor=pointer]: JavaScript
+            - generic [ref=e51] [cursor=pointer]: Memoir
+            - generic [ref=e52] [cursor=pointer]: Mythology
+            - generic [ref=e53] [cursor=pointer]: Non-Fiction
+            - generic [ref=e54] [cursor=pointer]: Philosophy
+            - generic [ref=e55] [cursor=pointer]: Post-Apocalyptic
+            - generic [ref=e56] [cursor=pointer]: Productivity
+            - generic [ref=e57] [cursor=pointer]: Project Management
+            - generic [ref=e58] [cursor=pointer]: Psychology
+            - generic [ref=e59] [cursor=pointer]: Romance
+            - generic [ref=e60] [cursor=pointer]: Sci-Fi & Fantasy
+            - generic [ref=e61] [cursor=pointer]: Science
+            - generic [ref=e62] [cursor=pointer]: Science Fiction
+            - generic [ref=e63] [cursor=pointer]: Self-Improvement
+            - generic [ref=e64] [cursor=pointer]: Software Engineering
+            - generic [ref=e65] [cursor=pointer]: Stoicism
+            - generic [ref=e66] [cursor=pointer]: Systems Design
+            - generic [ref=e67] [cursor=pointer]: Tech & Programming
+            - generic [ref=e68] [cursor=pointer]: Technology
+            - generic [ref=e69] [cursor=pointer]: UX Design
+        - generic [ref=e70]:
+          - generic [ref=e71] [cursor=pointer]:
+            - img "To Kill a Mockingbird" [ref=e73]
+            - generic [ref=e74]:
+              - heading "To Kill a Mockingbird" [level=3] [ref=e75]
+              - paragraph [ref=e76]: Harper Lee
+              - generic [ref=e77]:
+                - generic [ref=e78]: Fiction
+                - generic [ref=e79]: Classics
+          - generic [ref=e80] [cursor=pointer]:
+            - img "Pride and Prejudice" [ref=e82]
+            - generic [ref=e83]:
+              - heading "Pride and Prejudice" [level=3] [ref=e84]
+              - paragraph [ref=e85]: Jane Austen
+              - generic [ref=e86]:
+                - generic [ref=e87]: Fiction
+                - generic [ref=e88]: Classics
+          - generic [ref=e89] [cursor=pointer]:
+            - img "The Catcher in the Rye" [ref=e91]
+            - generic [ref=e92]:
+              - heading "The Catcher in the Rye" [level=3] [ref=e93]
+              - paragraph [ref=e94]: J.D. Salinger
+              - generic [ref=e95]:
+                - generic [ref=e96]: Fiction
+                - generic [ref=e97]: Classics
+          - generic [ref=e98] [cursor=pointer]:
+            - img "Beloved" [ref=e100]
+            - generic [ref=e101]:
+              - heading "Beloved" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Toni Morrison
+              - generic [ref=e104]:
+                - generic [ref=e105]: Fiction
+                - generic [ref=e106]: Historical Fiction
+          - generic [ref=e107] [cursor=pointer]:
+            - img "The Road" [ref=e109]
+            - generic [ref=e110]:
+              - heading "The Road" [level=3] [ref=e111]
+              - paragraph [ref=e112]: Cormac McCarthy
+              - generic [ref=e113]:
+                - generic [ref=e114]: Fiction
+                - generic [ref=e115]: Post-Apocalyptic
+          - generic [ref=e116] [cursor=pointer]:
+            - img "Normal People" [ref=e118]
+            - generic [ref=e119]:
+              - heading "Normal People" [level=3] [ref=e120]
+              - paragraph [ref=e121]: Sally Rooney
+              - generic [ref=e122]:
+                - generic [ref=e123]: Fiction
+                - generic [ref=e124]: Contemporary
+          - generic [ref=e125] [cursor=pointer]:
+            - img "A Gentleman in Moscow" [ref=e127]
+            - generic [ref=e128]:
+              - heading "A Gentleman in Moscow" [level=3] [ref=e129]
+              - paragraph [ref=e130]: Amor Towles
+              - generic [ref=e131]:
+                - generic [ref=e132]: Fiction
+                - generic [ref=e133]: Historical Fiction
+          - generic [ref=e134] [cursor=pointer]:
+            - 'img "Sapiens: A Brief History of Humankind" [ref=e136]'
+            - generic [ref=e137]:
+              - 'heading "Sapiens: A Brief History of Humankind" [level=3] [ref=e138]'
+              - paragraph [ref=e139]: Yuval Noah Harari
+              - generic [ref=e140]:
+                - generic [ref=e141]: Non-Fiction
+                - generic [ref=e142]: History
+          - generic [ref=e143] [cursor=pointer]:
+            - img "Educated" [ref=e145]
+            - generic [ref=e146]:
+              - heading "Educated" [level=3] [ref=e147]
+              - paragraph [ref=e148]: Tara Westover
+              - generic [ref=e149]:
+                - generic [ref=e150]: Non-Fiction
+                - generic [ref=e151]: Memoir
+          - generic [ref=e152] [cursor=pointer]:
+            - img "The Immortal Life of Henrietta Lacks" [ref=e154]
+            - generic [ref=e155]:
+              - heading "The Immortal Life of Henrietta Lacks" [level=3] [ref=e156]
+              - paragraph [ref=e157]: Rebecca Skloot
+              - generic [ref=e158]:
+                - generic [ref=e159]: Non-Fiction
+                - generic [ref=e160]: Science
+          - generic [ref=e161] [cursor=pointer]:
+            - img "Thinking, Fast and Slow" [ref=e163]
+            - generic [ref=e164]:
+              - heading "Thinking, Fast and Slow" [level=3] [ref=e165]
+              - paragraph [ref=e166]: Daniel Kahneman
+              - generic [ref=e167]:
+                - generic [ref=e168]: Non-Fiction
+                - generic [ref=e169]: Psychology
+          - generic [ref=e170] [cursor=pointer]:
+            - img "Born a Crime" [ref=e172]
+            - generic [ref=e173]:
+              - heading "Born a Crime" [level=3] [ref=e174]
+              - paragraph [ref=e175]: Trevor Noah
+              - generic [ref=e176]:
+                - generic [ref=e177]: Non-Fiction
+                - generic [ref=e178]: Memoir
+          - generic [ref=e179] [cursor=pointer]:
+            - img "Atomic Habits" [ref=e181]
+            - generic [ref=e182]:
+              - heading "Atomic Habits" [level=3] [ref=e183]
+              - paragraph [ref=e184]: James Clear
+              - generic [ref=e185]:
+                - generic [ref=e186]: Non-Fiction
+                - generic [ref=e187]: Self-Improvement
+          - generic [ref=e188] [cursor=pointer]:
+            - img "Neuromancer" [ref=e190]
+            - generic [ref=e191]:
+              - heading "Neuromancer" [level=3] [ref=e192]
+              - paragraph [ref=e193]: William Gibson
+              - generic [ref=e194]:
+                - generic [ref=e195]: Sci-Fi & Fantasy
+                - generic [ref=e196]: Science Fiction
+          - generic [ref=e197] [cursor=pointer]:
+            - img "The Name of the Wind" [ref=e199]
+            - generic [ref=e200]:
+              - heading "The Name of the Wind" [level=3] [ref=e201]
+              - paragraph [ref=e202]: Patrick Rothfuss
+              - generic [ref=e203]:
+                - generic [ref=e204]: Sci-Fi & Fantasy
+                - generic [ref=e205]: Fantasy
+          - generic [ref=e206] [cursor=pointer]:
+            - img "Project Hail Mary" [ref=e208]
+            - generic [ref=e209]:
+              - heading "Project Hail Mary" [level=3] [ref=e210]
+              - paragraph [ref=e211]: Andy Weir
+              - generic [ref=e212]:
+                - generic [ref=e213]: Sci-Fi & Fantasy
+                - generic [ref=e214]: Science Fiction
+          - generic [ref=e215] [cursor=pointer]:
+            - img "The Fifth Season" [ref=e217]
+            - generic [ref=e218]:
+              - heading "The Fifth Season" [level=3] [ref=e219]
+              - paragraph [ref=e220]: N.K. Jemisin
+              - generic [ref=e221]:
+                - generic [ref=e222]: Sci-Fi & Fantasy
+                - generic [ref=e223]: Fantasy
+          - generic [ref=e224] [cursor=pointer]:
+            - img "Ancillary Justice" [ref=e226]
+            - generic [ref=e227]:
+              - heading "Ancillary Justice" [level=3] [ref=e228]
+              - paragraph [ref=e229]: Ann Leckie
+              - generic [ref=e230]:
+                - generic [ref=e231]: Sci-Fi & Fantasy
+                - generic [ref=e232]: Science Fiction
+          - generic [ref=e233] [cursor=pointer]:
+            - img "Deep Work" [ref=e235]
+            - generic [ref=e236]:
+              - heading "Deep Work" [level=3] [ref=e237]
+              - paragraph [ref=e238]: Cal Newport
+              - generic [ref=e239]:
+                - generic [ref=e240]: Self-Improvement
+                - generic [ref=e241]: Productivity
+          - generic [ref=e242] [cursor=pointer]:
+            - img "The Psychology of Money" [ref=e244]
+            - generic [ref=e245]:
+              - heading "The Psychology of Money" [level=3] [ref=e246]
+              - paragraph [ref=e247]: Morgan Housel
+              - generic [ref=e248]:
+                - generic [ref=e249]: Self-Improvement
+                - generic [ref=e250]: Finance
+          - generic [ref=e251] [cursor=pointer]:
+            - img "Clean Code" [ref=e253]
+            - generic [ref=e254]:
+              - heading "Clean Code" [level=3] [ref=e255]
+              - paragraph [ref=e256]: Robert C. Martin
+              - generic [ref=e257]:
+                - generic [ref=e258]: Tech & Programming
+                - generic [ref=e259]: Software Engineering
+          - generic [ref=e260] [cursor=pointer]:
+            - 'img "Refactoring: Improving the Design of Existing Code" [ref=e262]'
+            - generic [ref=e263]:
+              - 'heading "Refactoring: Improving the Design of Existing Code" [level=3] [ref=e264]'
+              - paragraph [ref=e265]: Martin Fowler
+              - generic [ref=e266]:
+                - generic [ref=e267]: Tech & Programming
+                - generic [ref=e268]: Software Engineering

@@ -7,7 +7,7 @@ import { SearchResultModal } from "../SearchResultModal";
 import { TrendingBookItem } from "./TrendingBookItem";
 import { toBook } from "../../utils/googleBook";
 import type { Book } from "../../types/book";
-import type { GoogleBookResult } from "../../hooks/useGoogleBooks";
+import type { GoogleBookResult } from "../../hooks/useHardcoverSearch";
 
 function toGoogleBookResult(book: Book): GoogleBookResult {
   const isIsbn13 = book.isbn?.length === 13;

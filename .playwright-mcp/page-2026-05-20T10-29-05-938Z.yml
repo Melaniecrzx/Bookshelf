@@ -1,0 +1,143 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: Bookshelf
+    - navigation [ref=e6]:
+      - link "Accueil" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]:
+          - img [ref=e9]
+          - text: Accueil
+      - link "En cours 5" [ref=e12] [cursor=pointer]:
+        - /url: /reading
+        - generic [ref=e13]:
+          - img [ref=e14]
+          - text: En cours
+        - generic [ref=e16]: "5"
+      - link "À lire 18" [ref=e17] [cursor=pointer]:
+        - /url: /to-read
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - text: À lire
+        - generic [ref=e21]: "18"
+      - link "Lu 22" [ref=e22] [cursor=pointer]:
+        - /url: /read
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - text: Lu
+        - generic [ref=e27]: "22"
+      - link "Stats" [ref=e28] [cursor=pointer]:
+        - /url: /stats
+        - generic [ref=e29]:
+          - img [ref=e30]
+          - text: Stats
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - heading "Votre bibliothèque personnelle." [level=1] [ref=e35]:
+          - text: Votre bibliothèque
+          - text: personnelle.
+        - paragraph [ref=e36]: Gardez une trace de vos lectures, découvrez ce qui vous attend.
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: "22"
+            - generic [ref=e40]: lu
+          - generic [ref=e42]:
+            - generic [ref=e43]: "5"
+            - generic [ref=e44]: en cours
+          - generic [ref=e46]:
+            - generic [ref=e47]: "18"
+            - generic [ref=e48]: à lire
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - heading "En cours de lecture" [level=2] [ref=e52]
+            - link "Voir tout" [ref=e53] [cursor=pointer]:
+              - /url: /reading
+              - text: Voir tout
+              - img [ref=e54]
+          - generic [ref=e56]:
+            - generic [ref=e57] [cursor=pointer]:
+              - img "The Great Gatsby" [ref=e59]
+              - generic [ref=e60]:
+                - heading "The Great Gatsby" [level=3] [ref=e61]
+                - paragraph [ref=e62]: F. Scott Fitzgerald
+                - paragraph [ref=e66]: 95 / 180 pages
+                - generic [ref=e67]:
+                  - generic [ref=e68]: Fiction
+                  - generic [ref=e69]: Classics
+            - generic [ref=e70] [cursor=pointer]:
+              - img "1984" [ref=e72]
+              - generic [ref=e73]:
+                - heading "1984" [level=3] [ref=e74]
+                - paragraph [ref=e75]: George Orwell
+                - paragraph [ref=e79]: 210 / 328 pages
+                - generic [ref=e80]:
+                  - generic [ref=e81]: Fiction
+                  - generic [ref=e82]: Dystopian
+            - generic [ref=e83] [cursor=pointer]:
+              - img "Circe" [ref=e85]
+              - generic [ref=e86]:
+                - heading "Circe" [level=3] [ref=e87]
+                - paragraph [ref=e88]: Madeline Miller
+                - paragraph [ref=e92]: 150 / 393 pages
+                - generic [ref=e93]:
+                  - generic [ref=e94]: Fiction
+                  - generic [ref=e95]: Mythology
+            - generic [ref=e96] [cursor=pointer]:
+              - img "Dune" [ref=e98]
+              - generic [ref=e99]:
+                - heading "Dune" [level=3] [ref=e100]
+                - paragraph [ref=e101]: Frank Herbert
+                - paragraph [ref=e105]: 320 / 688 pages
+                - generic [ref=e106]:
+                  - generic [ref=e107]: Sci-Fi & Fantasy
+                  - generic [ref=e108]: Science Fiction
+            - generic [ref=e109] [cursor=pointer]:
+              - img "Designing Data-Intensive Applications" [ref=e111]
+              - generic [ref=e112]:
+                - heading "Designing Data-Intensive Applications" [level=3] [ref=e113]
+                - paragraph [ref=e114]: Martin Kleppmann
+                - paragraph [ref=e118]: 180 / 616 pages
+                - generic [ref=e119]:
+                  - generic [ref=e120]: Tech & Programming
+                  - generic [ref=e121]: Systems Design
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - heading "À lire ensuite" [level=2] [ref=e124]
+            - link "Voir tout" [ref=e125] [cursor=pointer]:
+              - /url: /to-read
+              - text: Voir tout
+              - img [ref=e126]
+          - generic [ref=e128]:
+            - generic [ref=e129] [cursor=pointer]:
+              - 'img "The Body: A Guide for Occupants" [ref=e131]'
+              - generic [ref=e132]:
+                - 'heading "The Body: A Guide for Occupants" [level=3] [ref=e133]'
+                - paragraph [ref=e134]: Bill Bryson
+                - generic [ref=e135]:
+                  - generic [ref=e136]: Non-Fiction
+                  - generic [ref=e137]: Science
+            - generic [ref=e138] [cursor=pointer]:
+              - 'img "Quiet: The Power of Introverts in a World That Can''t Stop Talking" [ref=e140]'
+              - generic [ref=e141]:
+                - 'heading "Quiet: The Power of Introverts in a World That Can''t Stop Talking" [level=3] [ref=e142]'
+                - paragraph [ref=e143]: Susan Cain
+                - generic [ref=e144]:
+                  - generic [ref=e145]: Non-Fiction
+                  - generic [ref=e146]: Psychology
+            - generic [ref=e147] [cursor=pointer]:
+              - 'img "Range: Why Generalists Triumph in a Specialized World" [ref=e149]'
+              - generic [ref=e150]:
+                - 'heading "Range: Why Generalists Triumph in a Specialized World" [level=3] [ref=e151]'
+                - paragraph [ref=e152]: David Epstein
+                - generic [ref=e153]:
+                  - generic [ref=e154]: Non-Fiction
+                  - generic [ref=e155]: Science
+            - generic [ref=e156] [cursor=pointer]:
+              - 'img "Say Nothing: A True Story of Murder and Memory in Northern Ireland" [ref=e158]'
+              - generic [ref=e159]:
+                - 'heading "Say Nothing: A True Story of Murder and Memory in Northern Ireland" [level=3] [ref=e160]'
+                - paragraph [ref=e161]: Patrick Radden Keefe
+                - generic [ref=e162]:
+                  - generic [ref=e163]: Non-Fiction
+                  - generic [ref=e164]: History

@@ -1,5 +1,5 @@
 import { Plus, Check } from "lucide-react";
-import type { GoogleBookResult } from "../../hooks/useGoogleBooks";
+import type { GoogleBookResult } from "../../hooks/useHardcoverSearch";
 import { BookCover } from "../ui/BookCover";
 
 interface SearchResultItemProps {

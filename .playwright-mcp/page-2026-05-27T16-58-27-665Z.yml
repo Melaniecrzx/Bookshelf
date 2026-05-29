@@ -1,0 +1,116 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "Library" [ref=e6] [cursor=pointer]:
+        - /url: /library
+        - img [ref=e7]
+        - text: Library
+      - link "Discover" [ref=e9] [cursor=pointer]:
+        - /url: /discover
+        - img [ref=e10]
+        - text: Discover
+    - button [ref=e14]:
+      - img [ref=e15]
+    - generic [ref=e18]:
+      - link "Stats" [ref=e19] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e20]
+        - text: Stats
+      - button "More" [ref=e21]:
+        - img [ref=e22]
+        - text: More
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - heading "Settings" [level=1] [ref=e28]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - button "Appearance" [ref=e32]
+          - button "Account" [ref=e33]
+          - button "Reading" [ref=e34]
+          - button "Notifications" [ref=e35]
+          - button "Privacy" [ref=e36]
+          - button "Data" [ref=e37]
+          - button "Danger Zone" [ref=e38]
+        - generic [ref=e39]:
+          - heading "Appearance" [level=2] [ref=e40]
+          - paragraph [ref=e41]: Customize how Bookshelf looks and feels.
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - heading "Theme" [level=3] [ref=e45]
+            - generic [ref=e46]:
+              - button "System" [ref=e47]:
+                - generic [ref=e56]: System
+              - button "Light" [ref=e57]:
+                - generic [ref=e65]: Light
+              - button "Dark" [ref=e66]:
+                - generic [ref=e74]: Dark
+              - button "OLED" [ref=e75]:
+                - generic [ref=e83]: OLED
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - heading "Accent color" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Choose the highlight color used for buttons, links, and focus states.
+            - generic [ref=e88]:
+              - button "Copper" [ref=e89]:
+                - img [ref=e91]
+                - generic [ref=e93]: Copper
+              - button "Teal" [ref=e94]:
+                - generic [ref=e96]: Teal
+              - button "Plum" [ref=e97]:
+                - generic [ref=e99]: Plum
+              - button "Slate" [ref=e100]:
+                - generic [ref=e102]: Slate
+              - button "Forest" [ref=e103]:
+                - generic [ref=e105]: Forest
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - heading "Font" [level=3] [ref=e108]
+              - paragraph [ref=e109]: Change the typeface used across the app.
+            - generic [ref=e110]:
+              - button "Aa Default Inria Serif headings + Inter body" [ref=e111]:
+                - generic [ref=e112]: Aa
+                - generic [ref=e113]:
+                  - paragraph [ref=e114]: Default
+                  - paragraph [ref=e115]: Inria Serif headings + Inter body
+              - button "Aa Sans-serif Inter everywhere" [ref=e116]:
+                - generic [ref=e117]: Aa
+                - generic [ref=e118]:
+                  - paragraph [ref=e119]: Sans-serif
+                  - paragraph [ref=e120]: Inter everywhere
+              - button "Aa Mono Monospace everywhere" [ref=e121]:
+                - generic [ref=e122]: Aa
+                - generic [ref=e123]:
+                  - paragraph [ref=e124]: Mono
+                  - paragraph [ref=e125]: Monospace everywhere
+          - generic [ref=e126]:
+            - heading "Accessibility" [level=3] [ref=e128]
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - paragraph [ref=e131]: Font size
+                - generic [ref=e132]:
+                  - button "Small" [ref=e133]
+                  - button "Default" [ref=e134]
+                  - button "Large" [ref=e135]
+                  - button "Extra Large" [ref=e136]
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: Line height
+                - generic [ref=e139]:
+                  - button "Compact" [ref=e140]
+                  - button "Default" [ref=e141]
+                  - button "Relaxed" [ref=e142]
+                  - button "Spacious" [ref=e143]
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - paragraph [ref=e147]: Simplified shelf view
+                  - paragraph [ref=e148]: Disables 3D book animations for a cleaner, flatter layout.
+                - switch [ref=e149]
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - paragraph [ref=e153]: High contrast
+                  - paragraph [ref=e154]: Increases border and text contrast for improved visibility.
+                - switch [ref=e155]
+  - generic [ref=e157]:
+    - paragraph [ref=e158]: You're browsing as a guest — your data won't be saved.
+    - generic [ref=e159]:
+      - button "Create account" [ref=e160]
+      - button "Sign in" [ref=e161]

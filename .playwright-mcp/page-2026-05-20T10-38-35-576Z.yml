@@ -1,0 +1,90 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]: Bookshelf
+      - navigation [ref=e6]:
+        - link "Accueil" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]:
+            - img [ref=e9]
+            - text: Accueil
+        - link "En cours 5" [ref=e12] [cursor=pointer]:
+          - /url: /reading
+          - generic [ref=e13]:
+            - img [ref=e14]
+            - text: En cours
+          - generic [ref=e16]: "5"
+        - link "À lire 18" [ref=e17] [cursor=pointer]:
+          - /url: /to-read
+          - generic [ref=e18]:
+            - img [ref=e19]
+            - text: À lire
+          - generic [ref=e21]: "18"
+        - link "Lu 22" [ref=e22] [cursor=pointer]:
+          - /url: /read
+          - generic [ref=e23]:
+            - img [ref=e24]
+            - text: Lu
+          - generic [ref=e27]: "22"
+        - link "Stats" [ref=e28] [cursor=pointer]:
+          - /url: /stats
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - text: Stats
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - heading "Statistiques" [level=1] [ref=e35]
+          - paragraph [ref=e36]: Vue d'ensemble de votre bibliothèque
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: "45"
+            - generic [ref=e40]: livres au total
+          - generic [ref=e41]:
+            - generic [ref=e42]: "22"
+            - generic [ref=e43]: lus
+          - generic [ref=e44]:
+            - generic [ref=e45]: "5"
+            - generic [ref=e46]: en cours
+          - generic [ref=e47]:
+            - generic [ref=e48]: "18"
+            - generic [ref=e49]: à lire
+        - generic [ref=e50]:
+          - heading "Objectif 2026" [level=2] [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: "11"
+            - generic [ref=e54]: livres lus sur
+            - button "24" [ref=e55]
+            - generic [ref=e56]: prévus
+          - paragraph [ref=e59]: 13 livre(s) restants pour atteindre votre objectif.
+        - generic [ref=e60]:
+          - heading "Pages lues en 2026" [level=2] [ref=e61]
+          - generic [ref=e62]:
+            - generic [ref=e63]: 4 351
+            - generic [ref=e64]: pages
+          - paragraph [ref=e65]:
+            - text: soit environ
+            - strong [ref=e66]: "396"
+            - text: pages par livre en moyenne
+        - generic [ref=e67]:
+          - heading "Genres dans votre bibliothèque" [level=2] [ref=e68]
+          - application [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - generic [ref=e75]: "0"
+                - generic [ref=e77]: "3"
+                - generic [ref=e79]: "6"
+                - generic [ref=e81]: "9"
+                - generic [ref=e83]: "12"
+              - generic [ref=e84]:
+                - generic [ref=e86]: Fiction
+                - generic [ref=e88]: Non-Fiction
+                - generic [ref=e90]: Sci-Fi & Fantasy
+                - generic [ref=e92]: Self-Improvement
+                - generic [ref=e94]: Tech & Programming
+                - generic [ref=e96]: Science Fiction
+                - generic [ref=e98]: Classics
+                - generic [ref=e100]: Fantasy
+                - generic [ref=e102]: Science
+                - generic [ref=e104]: SoftwareEngineering
+  - generic [ref=e105]: Programming

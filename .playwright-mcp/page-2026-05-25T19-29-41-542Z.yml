@@ -1,0 +1,83 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e7]
+        - generic [ref=e11]: Bookshelf
+      - generic [ref=e12]:
+        - img
+        - textbox "Search books… (press Enter)" [ref=e13]
+      - button "Sign out" [ref=e15]:
+        - img [ref=e16]
+        - text: Sign out
+    - navigation [ref=e19]:
+      - link "Library" [ref=e20] [cursor=pointer]:
+        - /url: /library
+        - img [ref=e21]
+        - text: Library
+      - link "Discover" [ref=e23] [cursor=pointer]:
+        - /url: /discover
+        - img [ref=e24]
+        - text: Discover
+      - link "Goals" [ref=e27] [cursor=pointer]:
+        - /url: /goals
+        - img [ref=e28]
+        - text: Goals
+      - link "Stats" [ref=e32] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e33]
+        - text: Stats
+      - link "Settings" [ref=e34] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e35]
+        - text: Settings
+  - main [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - heading "Goals" [level=1] [ref=e42]
+        - paragraph [ref=e43]: Your 2026 reading objectives
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Annual Reading Goal" [level=2] [ref=e46]
+          - generic [ref=e47]: On track 🎉
+        - generic [ref=e48]:
+          - img [ref=e50]:
+            - generic [ref=e53]: "12"
+            - generic [ref=e54]: of 24
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: "Goal:"
+              - button "24" [ref=e58]
+              - generic [ref=e59]: books in 2026
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - paragraph [ref=e62]: "0.6"
+                - paragraph [ref=e63]: books/week now
+              - generic [ref=e64]:
+                - paragraph [ref=e65]: "0.4"
+                - paragraph [ref=e66]: books/week needed
+      - generic [ref=e67]:
+        - heading "Monthly Breakdown" [level=2] [ref=e68]
+        - paragraph [ref=e70]: Current month highlighted
+      - generic [ref=e71]:
+        - heading "Milestones" [level=2] [ref=e72]
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - img [ref=e76]
+            - paragraph [ref=e78]: 25% — 6 books
+            - generic [ref=e79]: Reached!
+          - generic [ref=e80]:
+            - img [ref=e82]
+            - paragraph [ref=e84]: 50% — 12 books
+            - generic [ref=e85]: Reached!
+          - generic [ref=e86]:
+            - generic [ref=e88]: 75%
+            - paragraph [ref=e89]: 75% — 18 books
+          - generic [ref=e90]:
+            - generic [ref=e92]: 100%
+            - paragraph [ref=e93]: 100% — 24 books
+  - generic [ref=e94]:
+    - paragraph [ref=e95]: You're browsing as a guest — your data won't be saved.
+    - generic [ref=e96]:
+      - button "Create account" [ref=e97]
+      - button "Sign in" [ref=e98]

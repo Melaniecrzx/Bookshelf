@@ -1,4 +1,4 @@
-import type { GoogleBookResult } from "../hooks/useGoogleBooks";
+import type { GoogleBookResult } from "../hooks/useHardcoverSearch";
 import type { Book } from "../types/book";
 
 export function toBook(result: GoogleBookResult): Book {

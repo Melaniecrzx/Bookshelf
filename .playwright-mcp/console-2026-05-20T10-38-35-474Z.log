@@ -1,0 +1,7 @@
+[      42ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/react-dom_client.js?v=cb5d6042:20102
+[   79374ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5175/src/data/sample-books.ts?t=1779273594834:0
+[   79374ms] [ERROR] [vite] Failed to reload /src/pages/StatsPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5175/@vite/client:881
+[   79377ms] [ERROR] [vite] Failed to reload /src/pages/ReadingPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5175/@vite/client:881
+[   79377ms] [ERROR] [vite] Failed to reload /src/pages/ReadPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5175/@vite/client:881
+[   79377ms] [ERROR] [vite] Failed to reload /src/pages/ToReadPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5175/@vite/client:881
+[   79377ms] [ERROR] [vite] Failed to reload /src/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5175/@vite/client:881

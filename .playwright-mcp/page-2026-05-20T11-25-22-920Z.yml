@@ -1,0 +1,134 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: Bookshelf
+      - generic [ref=e7]:
+        - img
+        - textbox "Search books..." [ref=e8]
+    - navigation [ref=e9]:
+      - link "Home" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img [ref=e11]
+        - text: Home
+      - link "Reading 4" [ref=e14] [cursor=pointer]:
+        - /url: /reading
+        - img [ref=e15]
+        - text: Reading
+        - generic [ref=e17]: "4"
+      - link "To Read 18" [ref=e18] [cursor=pointer]:
+        - /url: /to-read
+        - img [ref=e19]
+        - text: To Read
+        - generic [ref=e21]: "18"
+      - link "Read 22" [ref=e22] [cursor=pointer]:
+        - /url: /read
+        - img [ref=e23]
+        - text: Read
+        - generic [ref=e26]: "22"
+      - link "Stats" [ref=e27] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e28]
+        - text: Stats
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - heading "Currently Reading" [level=1] [ref=e33]
+          - generic [ref=e34]: "4"
+        - paragraph [ref=e35]: Your current reads
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - img
+            - textbox "Search by title or author…" [ref=e39]
+          - generic [ref=e40]:
+            - generic [ref=e41] [cursor=pointer]: Biography
+            - generic [ref=e42] [cursor=pointer]: Classics
+            - generic [ref=e43] [cursor=pointer]: Contemporary
+            - generic [ref=e44] [cursor=pointer]: Cyberpunk
+            - generic [ref=e45] [cursor=pointer]: Decision Making
+            - generic [ref=e46] [cursor=pointer]: Dystopian
+            - generic [ref=e47] [cursor=pointer]: Fantasy
+            - generic [ref=e48] [cursor=pointer]: Fiction
+            - generic [ref=e49] [cursor=pointer]: Finance
+            - generic [ref=e50] [cursor=pointer]: Historical Fiction
+            - generic [ref=e51] [cursor=pointer]: History
+            - generic [ref=e52] [cursor=pointer]: Humor
+            - generic [ref=e53] [cursor=pointer]: JavaScript
+            - generic [ref=e54] [cursor=pointer]: Memoir
+            - generic [ref=e55] [cursor=pointer]: Mythology
+            - generic [ref=e56] [cursor=pointer]: Non-Fiction
+            - generic [ref=e57] [cursor=pointer]: Philosophy
+            - generic [ref=e58] [cursor=pointer]: Post-Apocalyptic
+            - generic [ref=e59] [cursor=pointer]: Productivity
+            - generic [ref=e60] [cursor=pointer]: Project Management
+            - generic [ref=e61] [cursor=pointer]: Psychology
+            - generic [ref=e62] [cursor=pointer]: Romance
+            - generic [ref=e63] [cursor=pointer]: Sci-Fi & Fantasy
+            - generic [ref=e64] [cursor=pointer]: Science
+            - generic [ref=e65] [cursor=pointer]: Science Fiction
+            - generic [ref=e66] [cursor=pointer]: Self-Improvement
+            - generic [ref=e67] [cursor=pointer]: Software Engineering
+            - generic [ref=e68] [cursor=pointer]: Stoicism
+            - generic [ref=e69] [cursor=pointer]: Systems Design
+            - generic [ref=e70] [cursor=pointer]: Tech & Programming
+            - generic [ref=e71] [cursor=pointer]: Technology
+            - generic [ref=e72] [cursor=pointer]: UX Design
+        - generic [ref=e73]:
+          - generic [ref=e74] [cursor=pointer]:
+            - img "1984" [ref=e76]
+            - generic [ref=e77]:
+              - heading "1984" [level=3] [ref=e78]
+              - paragraph [ref=e79]: George Orwell
+              - paragraph [ref=e83]: 210 / 328 pages
+              - generic [ref=e84]:
+                - generic [ref=e85]: Fiction
+                - generic [ref=e86]: Dystopian
+          - generic [ref=e87] [cursor=pointer]:
+            - img "Circe" [ref=e89]
+            - generic [ref=e90]:
+              - heading "Circe" [level=3] [ref=e91]
+              - paragraph [ref=e92]: Madeline Miller
+              - paragraph [ref=e96]: 150 / 393 pages
+              - generic [ref=e97]:
+                - generic [ref=e98]: Fiction
+                - generic [ref=e99]: Mythology
+          - generic [ref=e100] [cursor=pointer]:
+            - img "Dune" [ref=e102]
+            - generic [ref=e103]:
+              - heading "Dune" [level=3] [ref=e104]
+              - paragraph [ref=e105]: Frank Herbert
+              - paragraph [ref=e109]: 320 / 688 pages
+              - generic [ref=e110]:
+                - generic [ref=e111]: Sci-Fi & Fantasy
+                - generic [ref=e112]: Science Fiction
+          - generic [ref=e113] [cursor=pointer]:
+            - img "Designing Data-Intensive Applications" [ref=e115]
+            - generic [ref=e116]:
+              - heading "Designing Data-Intensive Applications" [level=3] [ref=e117]
+              - paragraph [ref=e118]: Martin Kleppmann
+              - paragraph [ref=e122]: 180 / 616 pages
+              - generic [ref=e123]:
+                - generic [ref=e124]: Tech & Programming
+                - generic [ref=e125]: Systems Design
+      - generic [ref=e128]:
+        - button [ref=e129]:
+          - img [ref=e130]
+        - generic [ref=e133]:
+          - img "1984" [ref=e135]
+          - generic [ref=e136]:
+            - heading "1984" [level=2] [ref=e137]
+            - paragraph [ref=e138]: George Orwell
+            - generic [ref=e140]:
+              - img [ref=e141]
+              - text: "1949"
+            - generic [ref=e143]:
+              - generic [ref=e144]: Fiction
+              - generic [ref=e145]: Dystopian
+              - generic [ref=e146]: Classics
+        - paragraph [ref=e150]: 210 / 328 pages
+        - paragraph [ref=e151]: Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its dystopian purgatory becomes more real.
+        - textbox "Add a note…" [ref=e153]
+        - button "Remove from library" [ref=e155]:
+          - img [ref=e156]
+          - text: Remove from library

@@ -1,0 +1,28 @@
+[   15475ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'. @ :0
+[   15475ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'notifications'. @ :0
+[   15475ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'push'. @ :0
+[   16083ms] Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
+    at <anonymous> (https://tracking.3ds.com/stat/tc_global3ds.js:452:4296)
+[   16179ms] Uncaught TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')
+    at xhttp.onload (https://tracking.3ds.com/stat/init/ds_init_global.js:413:1777)
+[   16801ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://eu1.iam.3dexperience.3ds.com/api/authenticated/user/me:0
+[   16801ms] [WARNING] User fetch failed: HTTP error! status: 401 @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   30537ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'. @ :0
+[   30537ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'notifications'. @ :0
+[   30537ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'push'. @ :0
+[   30933ms] [WARNING] [ds-svg] Unknown icon name: client @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   30934ms] [WARNING] [ds-svg] Unknown icon name: étudiant @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   30934ms] [WARNING] [ds-svg] Unknown icon name: partenaire @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   30934ms] [WARNING] [ds-svg] Unknown icon name: community_user @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   30952ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://eu1.iam.3dexperience.3ds.com/api/authenticated/user/me:0
+[   30953ms] [WARNING] User fetch failed: HTTP error! status: 401 @ https://www.3ds.com/statics/3ds-navigation/ds-header.min.js:6
+[   76068ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'. @ :0
+[   76068ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'notifications'. @ :0
+[   76068ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'push'. @ :0
+[   76312ms] [ERROR] Access to font at 'https://www.3ds.com/statics/3ds-navigation/fonts/3ds/ui-kit-icons.woff2' from origin 'https://blog.3ds.com' has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header has a value 'https://www.3ds.com' that is not equal to the supplied origin. @ https://blog.3ds.com/fr/brands/netvibes/entrez-dans-lere-du-workflow-collaboratif-sur-mesure/:0
+[   76312ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://www.3ds.com/statics/3ds-navigation/fonts/3ds/ui-kit-icons.woff2:0
+[   81429ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'. @ :0
+[   81429ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'notifications'. @ :0
+[   81429ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'push'. @ :0
+[   81570ms] [ERROR] Access to font at 'https://www.3ds.com/statics/3ds-navigation/fonts/3ds/ui-kit-icons.woff2' from origin 'https://blog.3ds.com' has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header has a value 'https://www.3ds.com' that is not equal to the supplied origin. @ https://blog.3ds.com/fr/brands/netvibes/?_gl=1*q3riku*_up*MQ..*_ga*MTE4ODEzMDMyOC4xNzc5NzM2MzUz*_ga_DYJDKXYEZ4*czE3Nzk3MzYzNTMkbzEkZzAkdDE3Nzk3MzYzNTMkajYwJGwwJGgw*_ga_TPGKGE8GTG*czE3Nzk3MzYzNTMkbzEkZzAkdDE3Nzk3MzYzNTMkajYwJGwwJGgw:0
+[   81570ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://www.3ds.com/statics/3ds-navigation/fonts/3ds/ui-kit-icons.woff2:0

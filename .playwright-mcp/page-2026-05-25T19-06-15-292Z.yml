@@ -1,0 +1,20 @@
+- main [ref=e4]:
+  - generic [ref=e6]:
+    - heading "Sign in" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Welcome back to your library.
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: Email
+        - textbox "Email" [ref=e12]:
+          - /placeholder: you@example.com
+      - generic [ref=e13]:
+        - generic [ref=e14]: Password
+        - textbox "Password" [ref=e15]:
+          - /placeholder: Your password
+      - button "Sign in" [ref=e16]
+    - generic [ref=e17]:
+      - button "Continue as guest" [ref=e18]
+      - paragraph [ref=e19]:
+        - text: No account yet?
+        - link "Sign up" [ref=e20] [cursor=pointer]:
+          - /url: /signup

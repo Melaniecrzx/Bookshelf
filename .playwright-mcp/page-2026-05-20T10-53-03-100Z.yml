@@ -1,0 +1,136 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "Accueil" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img [ref=e6]
+      - text: Accueil
+    - link "En cours 5" [ref=e9] [cursor=pointer]:
+      - /url: /reading
+      - img [ref=e10]
+      - text: En cours
+      - generic [ref=e12]: "5"
+    - link "À lire 9+" [ref=e13] [cursor=pointer]:
+      - /url: /to-read
+      - img [ref=e14]
+      - text: À lire
+      - generic [ref=e16]: 9+
+    - link "Lu 9+" [ref=e17] [cursor=pointer]:
+      - /url: /read
+      - img [ref=e18]
+      - text: Lu
+      - generic [ref=e21]: 9+
+    - link "Stats" [ref=e22] [cursor=pointer]:
+      - /url: /stats
+      - img [ref=e23]
+      - text: Stats
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Votre bibliothèque personnelle." [level=1] [ref=e28]:
+          - text: Votre bibliothèque
+          - text: personnelle.
+        - paragraph [ref=e29]: Gardez une trace de vos lectures, découvrez ce qui vous attend.
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: "22"
+            - generic [ref=e33]: lu
+          - generic [ref=e35]:
+            - generic [ref=e36]: "5"
+            - generic [ref=e37]: en cours
+          - generic [ref=e39]:
+            - generic [ref=e40]: "18"
+            - generic [ref=e41]: à lire
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - heading "En cours de lecture" [level=2] [ref=e45]
+            - link "Voir tout" [ref=e46] [cursor=pointer]:
+              - /url: /reading
+              - text: Voir tout
+              - img [ref=e47]
+          - generic [ref=e49]:
+            - generic [ref=e50] [cursor=pointer]:
+              - img "The Great Gatsby" [ref=e52]
+              - generic [ref=e53]:
+                - heading "The Great Gatsby" [level=3] [ref=e54]
+                - paragraph [ref=e55]: F. Scott Fitzgerald
+                - paragraph [ref=e59]: 95 / 180 pages
+                - generic [ref=e60]:
+                  - generic [ref=e61]: Fiction
+                  - generic [ref=e62]: Classics
+            - generic [ref=e63] [cursor=pointer]:
+              - img "1984" [ref=e65]
+              - generic [ref=e66]:
+                - heading "1984" [level=3] [ref=e67]
+                - paragraph [ref=e68]: George Orwell
+                - paragraph [ref=e72]: 210 / 328 pages
+                - generic [ref=e73]:
+                  - generic [ref=e74]: Fiction
+                  - generic [ref=e75]: Dystopian
+            - generic [ref=e76] [cursor=pointer]:
+              - img "Circe" [ref=e78]
+              - generic [ref=e79]:
+                - heading "Circe" [level=3] [ref=e80]
+                - paragraph [ref=e81]: Madeline Miller
+                - paragraph [ref=e85]: 150 / 393 pages
+                - generic [ref=e86]:
+                  - generic [ref=e87]: Fiction
+                  - generic [ref=e88]: Mythology
+            - generic [ref=e89] [cursor=pointer]:
+              - img "Dune" [ref=e91]
+              - generic [ref=e92]:
+                - heading "Dune" [level=3] [ref=e93]
+                - paragraph [ref=e94]: Frank Herbert
+                - paragraph [ref=e98]: 320 / 688 pages
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Sci-Fi & Fantasy
+                  - generic [ref=e101]: Science Fiction
+            - generic [ref=e102] [cursor=pointer]:
+              - img "Designing Data-Intensive Applications" [ref=e104]
+              - generic [ref=e105]:
+                - heading "Designing Data-Intensive Applications" [level=3] [ref=e106]
+                - paragraph [ref=e107]: Martin Kleppmann
+                - paragraph [ref=e111]: 180 / 616 pages
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Tech & Programming
+                  - generic [ref=e114]: Systems Design
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - heading "À lire ensuite" [level=2] [ref=e117]
+            - link "Voir tout" [ref=e118] [cursor=pointer]:
+              - /url: /to-read
+              - text: Voir tout
+              - img [ref=e119]
+          - generic [ref=e121]:
+            - generic [ref=e122] [cursor=pointer]:
+              - 'img "The Body: A Guide for Occupants" [ref=e124]'
+              - generic [ref=e125]:
+                - 'heading "The Body: A Guide for Occupants" [level=3] [ref=e126]'
+                - paragraph [ref=e127]: Bill Bryson
+                - generic [ref=e128]:
+                  - generic [ref=e129]: Non-Fiction
+                  - generic [ref=e130]: Science
+            - generic [ref=e131] [cursor=pointer]:
+              - 'img "Quiet: The Power of Introverts in a World That Can''t Stop Talking" [ref=e133]'
+              - generic [ref=e134]:
+                - 'heading "Quiet: The Power of Introverts in a World That Can''t Stop Talking" [level=3] [ref=e135]'
+                - paragraph [ref=e136]: Susan Cain
+                - generic [ref=e137]:
+                  - generic [ref=e138]: Non-Fiction
+                  - generic [ref=e139]: Psychology
+            - generic [ref=e140] [cursor=pointer]:
+              - 'img "Range: Why Generalists Triumph in a Specialized World" [ref=e142]'
+              - generic [ref=e143]:
+                - 'heading "Range: Why Generalists Triumph in a Specialized World" [level=3] [ref=e144]'
+                - paragraph [ref=e145]: David Epstein
+                - generic [ref=e146]:
+                  - generic [ref=e147]: Non-Fiction
+                  - generic [ref=e148]: Science
+            - generic [ref=e149] [cursor=pointer]:
+              - 'img "Say Nothing: A True Story of Murder and Memory in Northern Ireland" [ref=e151]'
+              - generic [ref=e152]:
+                - 'heading "Say Nothing: A True Story of Murder and Memory in Northern Ireland" [level=3] [ref=e153]'
+                - paragraph [ref=e154]: Patrick Radden Keefe
+                - generic [ref=e155]:
+                  - generic [ref=e156]: Non-Fiction
+                  - generic [ref=e157]: History

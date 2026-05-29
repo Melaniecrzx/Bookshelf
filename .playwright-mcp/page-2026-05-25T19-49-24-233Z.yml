@@ -1,0 +1,32 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "Library" [ref=e6] [cursor=pointer]:
+        - /url: /library
+        - img [ref=e7]
+        - text: Library
+      - link "Discover" [ref=e9] [cursor=pointer]:
+        - /url: /discover
+        - img [ref=e10]
+        - text: Discover
+    - button [ref=e14]:
+      - img [ref=e15]
+    - generic [ref=e18]:
+      - link "Stats" [ref=e19] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e20]
+        - text: Stats
+      - button "More" [ref=e21]:
+        - img [ref=e22]
+        - text: More
+  - main [ref=e26]:
+    - generic [ref=e28]:
+      - heading "Your Library" [level=1] [ref=e29]
+      - button "New Shelf" [ref=e30]:
+        - img [ref=e31]
+        - text: New Shelf
+  - generic [ref=e33]:
+    - paragraph [ref=e34]: You're browsing as a guest — your data won't be saved.
+    - generic [ref=e35]:
+      - button "Create account" [ref=e36]
+      - button "Sign in" [ref=e37]

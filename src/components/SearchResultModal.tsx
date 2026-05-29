@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { X, Calendar, BookOpen, Hash, Plus, Check } from "lucide-react";
-import type { GoogleBookResult } from "../hooks/useGoogleBooks";
+import type { GoogleBookResult } from "../hooks/useHardcoverSearch";
 import { GenreTag } from "./ui/GenreTag";
 import { BookCover } from "./ui/BookCover";
 
